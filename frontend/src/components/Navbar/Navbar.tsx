@@ -1,13 +1,10 @@
 import styles from "./Navbar.module.css";
-// import logo from "../../assets/synapse.jpg";
-// import searchIconLight from "../../assets/search-w.png";
 import searchIconDark from "../../assets/search-b.png";
 
 const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
-        {/* <img src={logo} alt="synapse logo" /> */}
         <p>Synapse</p>
       </div>
 
