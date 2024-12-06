@@ -1,0 +1,11 @@
+:root {
+    --background-color : #fff;
+    --hover-color        : #0987f2;
+    --btn-color: #000;
+    --link-color        : #0987f2;
+    --btn-text-color   : #fff;
+    --project-card-bg  : #ffffff00;
+    --text-color       : #222;
+    --form-text-color  : #555;
+    --footer-text-color: #888;
+}
