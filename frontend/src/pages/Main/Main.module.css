@@ -1,0 +1,15 @@
+.main {
+    margin: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.banners{
+  align-self: center;
+  margin: 1.5rem 0;
+}
+
+.banners img{
+  width: 90dvw;
+}

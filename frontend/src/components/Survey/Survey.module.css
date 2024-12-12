@@ -1,0 +1,42 @@
+.survey {
+  margin: 1.5rem 0;
+
+  h1{
+      margin-bottom: 12px;
+  }
+
+  p {
+      font-size: 1.2rem;
+      color: grey;
+  }
+
+}
+
+.takeSurveyButton {
+  margin-top: 1rem;
+  min-width: 6.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #242424;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &:hover {
+    background: var(--hover-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  }
+
+  button {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0;
+  }
+}
