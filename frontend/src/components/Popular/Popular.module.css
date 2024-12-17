@@ -1,0 +1,11 @@
+hr {
+  margin-bottom: 1.5rem;
+  border: .125rem solid #242424;
+}
+
+.popularCourse {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
