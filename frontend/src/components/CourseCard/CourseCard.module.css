@@ -1,0 +1,42 @@
+.courseCard {
+  max-width: 22rem;
+  border: 1px #242424 solid;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+  position: relative;
+
+  &:hover{
+    transform: scale(1.01);
+  }
+}
+
+a img {
+  max-width: 22rem;
+  border-radius: 25px 25px 0 0;
+}
+
+h3, ul {
+  padding: 0 1rem;
+}
+
+ul {
+  flex: 2;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  color: gray;
+
+  li {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1rem;
+
+    &:hover{
+      color: var(--hover-color);
+    }
+  }
+
+
+}
