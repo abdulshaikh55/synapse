@@ -1,6 +1,7 @@
 hr {
   margin-bottom: 1.5rem;
   border: .125rem solid #242424;
+  width: 100%;
 }
 
 .popularCourse {
@@ -8,4 +9,21 @@ hr {
   flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .popularCourse {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popularCourse {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
 }
