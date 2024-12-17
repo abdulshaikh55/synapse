@@ -1,0 +1,33 @@
+.aboutTests {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.left {
+  min-width: 20rem;
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+.skillSection {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    color: gray;
+  }
+}
+
+.right {
+  width: 35rem;
+  img {
+    width: 100%;
+    max-width: 35rem;
+  }
+}
