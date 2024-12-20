@@ -2,6 +2,7 @@ import styles from "./Main.module.css";
 import banner from "../../assets/banners/banner.png";
 import Survey from "../../components/Survey/Survey";
 import Popular from "../../components/Popular/Popular";
+import AboutTests from "../../components/AboutTests/AboutTests";
 
 const Hero = () => {
   return (
@@ -13,6 +14,7 @@ const Hero = () => {
       </div>
 
       <Popular />
+      <AboutTests />
     </section>
   );
 };
