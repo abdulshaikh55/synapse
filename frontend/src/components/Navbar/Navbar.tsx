@@ -14,7 +14,10 @@ const Navbar = () => {
       <ul>
         <li>Courses</li>
         <li>Tests</li>
-        <li>Help</li>
+
+        <li>
+          <Link to="/contactUs/">Contact Us</Link>
+        </li>
       </ul>
 
       <div className={styles.searchBox}>
