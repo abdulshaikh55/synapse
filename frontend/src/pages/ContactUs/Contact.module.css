@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.formCard {
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.formContent {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.welcomeText {
+  font-size: 1.5rem;
+  color: #242424;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-top: 1.5rem;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  padding: 0.625rem 1rem;
+  display: block;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: 2px solid #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.buttonGroup {
+  margin-top: 2rem;
+}
+
+.submitButton {
+  background-color: #242424;
+  color: white;
+  font-weight: 700;
+  padding: 0.625rem 1rem;
+  width: 100%;
+  height: 2.8125rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submitButton:hover {
+  background-color: var(--hover-color);
+}
+
+.addressSection {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.addressTitle {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.addressText {
+  color: #6b7280;
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+.socialLinks {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.socialTitle {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.socialIcons a {
+  color: #242424;
+  font-size: 2rem;
+  transition: color 0.2s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--hover-color);
+}
+
+@media (min-width: 640px) {
+  .formContent {
+    padding: 2rem;
+  }
+
+  .welcomeText {
+    font-size: 1.5rem;
+  }
+}

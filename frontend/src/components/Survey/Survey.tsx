@@ -1,4 +1,5 @@
 import styles from "./Survey.module.css";
+import { Link } from "react-router-dom";
 
 const Survey = () => {
   return (
@@ -9,7 +10,9 @@ const Survey = () => {
         fit your needs.
       </p>
       <div className={styles.takeSurveyButton}>
-        <button>Take survey</button>
+        <Link to="/surveyForm">
+          <button>Take survey</button>
+        </Link>
       </div>
     </section>
   );
