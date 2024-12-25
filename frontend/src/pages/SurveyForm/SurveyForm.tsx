@@ -32,12 +32,17 @@ export const SurveyForm = () => {
     startIndex + questionsPerPage
   );
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handlePreviousSection = () => {
     if (currentSection === "informative") {
       setCurrentSection("required");
       setCurrentPage(
         Math.ceil(questions.required_questions.length / questionsPerPage) - 1
       );
+      scrollToTop();
     }
   };
 
@@ -49,6 +54,7 @@ export const SurveyForm = () => {
     ) {
       setCurrentSection("informative");
       setCurrentPage(0);
+      scrollToTop();
     } else if (
       currentSection === "informative" &&
       currentPage ===
@@ -57,6 +63,7 @@ export const SurveyForm = () => {
       console.log("Final submission:", data);
     } else {
       setCurrentPage((prev) => prev + 1);
+      scrollToTop();
     }
   };
 
@@ -147,14 +154,17 @@ export const SurveyForm = () => {
           {(currentPage > 0 || currentSection === "informative") && (
             <button
               type="button"
-              onClick={
+              onClick={() => {
                 currentPage > 0
-                  ? () => setCurrentPage((prev) => prev - 1)
-                  : handlePreviousSection
-              }
+                  ? setCurrentPage((prev) => {
+                      scrollToTop();
+                      return prev - 1;
+                    })
+                  : handlePreviousSection();
+              }}
               className={styles.navButton}
             >
-              {currentPage > 0 ? "Previous" : "Previous"}
+              Previous
             </button>
           )}
           <button type="submit" className={styles.navButton}>
