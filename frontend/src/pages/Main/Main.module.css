@@ -1,15 +1,82 @@
 .main {
-    margin: 1rem 3rem;
+  margin: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .banners{
+    align-self: center;
+    margin: 1.5rem 0;
+  }
+
+  .banners img{
+    width: 90dvw;
+  }
+}
+
+.aboutTests {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+  gap: 5rem;
+
+  .left {
+    min-width: 20rem;
+    h2 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .skillSection {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+    p {
+      color: gray;
+    }
+  }
+
+  .right {
+    width: 35rem;
+    img {
+      width: 100%;
+      max-width: 35rem;
+    }
+  }
+}
+
+
+.additionalResources {
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .io {
     display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
+    gap: 2rem;
+    align-items: center;
+  }
 
-.banners{
-  align-self: center;
-  margin: 1.5rem 0;
-}
+  .in, .out {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
 
-.banners img{
-  width: 90dvw;
+  .io img {
+    min-width: 250px;
+    width: 100%;
+    max-width: 100%;
+    border: 2px solid gray;
+    margin-bottom: 1rem;
+  }
+
+  p{
+    color: gray;
+    font-size: 1.2rem;
+  }
 }
