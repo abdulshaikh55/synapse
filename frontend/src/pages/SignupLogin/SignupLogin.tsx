@@ -1,43 +1,81 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./SignupLogin.module.css";
+import { signup, login } from "../../services/authService";
 
 const SignupLogin = () => {
-  const [signedIn, setSignedIn] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [isSignup, setIsSignup] = useState(true);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      if (isSignup) {
+        const data = await signup({ name, email, password });
+        console.log("Signup successful:", data);
+      } else {
+        const data = await login({ email, password });
+        console.log("Login successful:", data);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.formCard}>
         <div className={styles.formContent}>
           <p className={styles.welcomeText}>
-            {signedIn ? "Welcome back!" : "Welcome!"}
+            {isSignup ? "Welcome!" : "Welcome back!"}
           </p>
 
           <div className={styles.formGroup}>
             <div
-              className={`${styles.inputGroup} ${signedIn ? styles.hide : ""}`}
+              className={`${styles.inputGroup} ${isSignup ? "" : styles.hide}`}
             >
               <label className={styles.label}>Username</label>
-              <input className={styles.input} type="text" required />
+              <input
+                className={styles.input}
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </div>
 
             <div className={styles.inputGroup}>
               <label className={styles.label}>Email Address</label>
-              <input className={styles.input} type="email" required />
+              <input
+                className={styles.input}
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </div>
 
             <div className={styles.inputGroup}>
               <label className={styles.label}>Password</label>
-              <input className={styles.input} type="password" required />
+              <input
+                className={styles.input}
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
               <a
                 href="#"
                 className={`${styles.forgotPassword} ${
-                  !signedIn ? styles.hide : ""
+                  !isSignup ? styles.hide : ""
                 }`}
               >
                 Forget Password?
               </a>
             </div>
             <div
-              className={`${styles.inputGroup} ${signedIn ? styles.hide : ""}`}
+              className={`${styles.inputGroup} ${isSignup ? "" : styles.hide}`}
             >
               <label className={styles.label}>Reenter Password</label>
               <input className={styles.input} type="password" required />
@@ -45,8 +83,8 @@ const SignupLogin = () => {
           </div>
 
           <div className={styles.buttonGroup}>
-            <button className={styles.loginButton}>
-              {signedIn ? "Login" : "Signup"}
+            <button className={styles.loginButton} onClick={handleSubmit}>
+              {isSignup ? "Signup" : "Login"}
             </button>
 
             <button className={styles.googleButton}>
@@ -78,13 +116,13 @@ const SignupLogin = () => {
             <a
               href="#"
               className={styles.signupLink}
-              onClick={() => setSignedIn(!signedIn)}
+              onClick={() => setIsSignup(!isSignup)}
             >
-              {signedIn
-                ? "Don't have an account yet?"
-                : "Already have an account?"}{" "}
+              {isSignup
+                ? "Already have an account?"
+                : "Don't have an account yet?"}{" "}
               <span className={styles.signupText}>
-                {signedIn ? "Sign Up" : "Log In"}
+                {isSignup ? "Log In" : "Sign Up"}
               </span>
             </a>
           </div>

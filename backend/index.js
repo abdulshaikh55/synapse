@@ -20,7 +20,7 @@ app.use('/auth', AuthRouter);
 const server = () => {
   connectDB();
   app.listen(PORT, () => {
-    console.log(`console is running in ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
   })
 }
 

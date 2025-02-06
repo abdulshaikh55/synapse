@@ -1,4 +1,5 @@
 const Joi = require("joi");
+const { body, validationResult } = require('express-validator');
 
 const signupValidation = (req, res, next) => {
   const schema = Joi.object({
