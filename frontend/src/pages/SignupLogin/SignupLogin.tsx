@@ -15,13 +15,15 @@ const SignupLogin = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      let data;
       if (isSignup) {
-        const data = await signup({ email, password, name });
+        data = await signup({ email, password, name });
         console.log("Signup successful:", data);
       } else {
-        const data = await login({ email, password });
+        data = await login({ email, password });
         console.log("Login successful:", data);
       }
+      localStorage.setItem("authToken", data.token);
       setIsAuthenticated(true);
       navigate("/");
     } catch (error) {
