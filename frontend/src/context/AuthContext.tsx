@@ -20,7 +20,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      // Token is already stored during login/signup
     } else {
       localStorage.removeItem("authToken");
     }
