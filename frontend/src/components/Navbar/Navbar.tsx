@@ -1,8 +1,15 @@
 import styles from "./Navbar.module.css";
+import { useState } from "react";
 import searchIconDark from "../../assets/search-b.png";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import defaultProfilePic from "../../assets/default_profile.png";
+import DropDownProfile from "../DropDownProfile/DropDownProfile";
 
 const Navbar = () => {
+  const { isAuthenticated } = useAuth();
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <div className={styles.navbar}>
       <Link to="/">
@@ -25,11 +32,20 @@ const Navbar = () => {
         <img src={searchIconDark} alt="search icon" />
       </div>
 
-      <Link to="/signupLogin">
-        <div className={styles.loginSignupButton}>
-          <button>Login / Signup</button>
+      {isAuthenticated ? (
+        <div className={styles.profilePicture}>
+          <button onClick={() => setShowDropdown(!showDropdown)}>
+            <img src={defaultProfilePic} alt="Profile" />
+          </button>
+          {showDropdown && <DropDownProfile />}
         </div>
-      </Link>
+      ) : (
+        <Link to="/signupLogin">
+          <div className={styles.loginSignupButton}>
+            <button>Login / Signup</button>
+          </div>
+        </Link>
+      )}
     </div>
   );
 };
