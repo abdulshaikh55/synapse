@@ -1,23 +1,29 @@
 import React, { useState } from "react";
 import styles from "./SignupLogin.module.css";
 import { signup, login } from "../../services/authService";
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const SignupLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [isSignup, setIsSignup] = useState(true);
+  const { setIsAuthenticated } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       if (isSignup) {
-        const data = await signup({ name, email, password });
+        const data = await signup({ email, password, name });
         console.log("Signup successful:", data);
       } else {
         const data = await login({ email, password });
         console.log("Login successful:", data);
       }
+      setIsAuthenticated(true);
+      navigate("/");
     } catch (error) {
       console.error("Error:", error);
     }

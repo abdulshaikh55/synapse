@@ -1,8 +1,11 @@
 import styles from "./Navbar.module.css";
 import searchIconDark from "../../assets/search-b.png";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 const Navbar = () => {
+  const { isAuthenticated } = useAuth();
+
   return (
     <div className={styles.navbar}>
       <Link to="/">
@@ -25,11 +28,17 @@ const Navbar = () => {
         <img src={searchIconDark} alt="search icon" />
       </div>
 
-      <Link to="/signupLogin">
-        <div className={styles.loginSignupButton}>
-          <button>Login / Signup</button>
+      {isAuthenticated ? (
+        <div className={styles.profilePicture}>
+          <img src="../../assets/default_profile.png" alt="Profile" />
         </div>
-      </Link>
+      ) : (
+        <Link to="/signupLogin">
+          <div className={styles.loginSignupButton}>
+            <button>Login / Signup</button>
+          </div>
+        </Link>
+      )}
     </div>
   );
 };
