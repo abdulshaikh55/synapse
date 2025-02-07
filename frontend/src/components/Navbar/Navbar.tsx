@@ -2,6 +2,7 @@ import styles from "./Navbar.module.css";
 import searchIconDark from "../../assets/search-b.png";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import defaultProfilePic from "../../assets/default_profile.png";
 
 const Navbar = () => {
   const { isAuthenticated } = useAuth();
@@ -30,7 +31,7 @@ const Navbar = () => {
 
       {isAuthenticated ? (
         <div className={styles.profilePicture}>
-          <img src="../../assets/default_profile.png" alt="Profile" />
+          <img src={defaultProfilePic} alt="Profile" />
         </div>
       ) : (
         <Link to="/signupLogin">
