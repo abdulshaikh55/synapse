@@ -9,23 +9,24 @@
   position: relative;
   flex: 1 1 300px;
 
-  &:hover{
+  &:hover {
     transform: scale(1.01);
   }
 
-  h3, ul {
+  h3,
+  ul {
     padding: 0 1rem;
   }
 }
 
-a img {
+.courseCardImage {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 25px 25px 0 0;
 }
 
-ul {
+.courseCardList {
   flex: 2;
   list-style: none;
   display: flex;
@@ -34,15 +35,15 @@ ul {
   font-size: clamp(0.9rem, 2vw, 1.2rem);
   color: gray;
   padding-bottom: 1rem;
+}
 
-  li {
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 0.5rem;
+.courseCardListItem {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 0.5rem;
 
-    &:hover{
-      color: var(--hover-color);
-    }
+  &:hover {
+    color: var(--hover-color);
   }
 }
 
@@ -51,7 +52,7 @@ ul {
     min-width: 240px;
   }
 
-  h3 {
+  .courseCard h3 {
     font-size: clamp(1.1rem, 4vw, 1.5rem);
   }
 }
