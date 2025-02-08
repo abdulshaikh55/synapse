@@ -6,6 +6,7 @@ import SignupLogin from "./pages/SignupLogin/SignupLogin";
 import Contact from "./pages/ContactUs/Contact";
 import { SurveyForm } from "./pages/SurveyForm/SurveyForm";
 import { AuthProvider } from "./context/AuthContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contactUs" element={<Contact />} />
           <Route path="/surveyForm" element={<SurveyForm />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </AuthProvider>
   );
