@@ -15,29 +15,33 @@
   &::before {
     content: "";
     position: absolute;
-    top: -1rem;
-    width: 25px;
-    height: 25px;
-    transform: rotate();
-    background-color: white;
+    top: -10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
   }
 }
 
-.dropDownList {
+.dropDownProfileList {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.dropDownList li {
+.dropDownProfileListItem {
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 4px 12px;
   border-radius: 4px;
   transition: background-color 0.2s;
   color: #333;
   font-size: 0.9rem;
 }
 
-.dropDownList li:hover {
+.dropDownProfileListItem:hover {
   background-color: #f5f5f5;
 }
