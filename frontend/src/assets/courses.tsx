@@ -359,3 +359,5 @@ const courses = [
     url: "https://linuxfoundation.org/learn/linux",
   },
 ];
+
+export default courses;

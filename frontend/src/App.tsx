@@ -8,6 +8,7 @@ import { SurveyForm } from "./pages/SurveyForm/SurveyForm";
 import { AuthProvider } from "./context/AuthContext";
 import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import Courses from "./pages/Courses/Courses";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contactUs" element={<Contact />} />
           <Route path="/surveyForm" element={<SurveyForm />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/courses" element={<Courses />} />
         </Routes>
         <Footer />
       </BrowserRouter>

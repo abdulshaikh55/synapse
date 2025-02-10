@@ -19,7 +19,9 @@ const Navbar = () => {
       </Link>
 
       <ul>
-        <li>Courses</li>
+        <li>
+          <Link to="/courses">Courses</Link>
+        </li>
         <li>Tests</li>
 
         <li>

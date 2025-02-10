@@ -1,0 +1,27 @@
+.coursesPage {
+  margin: 1rem 3rem;
+}
+
+.allCourse {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .allCourse {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .allCourse {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+}
