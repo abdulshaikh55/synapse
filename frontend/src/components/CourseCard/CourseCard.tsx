@@ -9,7 +9,7 @@ const CourseCard = (props: any) => {
           alt={props.name}
           className={styles.courseCardImage}
         />
-        <h3>{props.name}</h3>
+        <h3 className={styles.courseName}>{props.name}</h3>
       </a>
 
       <ul className={styles.courseCardList}>

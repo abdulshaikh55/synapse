@@ -6,7 +6,7 @@ const Courses = () => {
   return (
     <div className={styles.coursesPage}>
       <h2 className={styles.courseHeader}>All Courses</h2>
-      <div className={styles.allCourse}>
+      <div className={styles.coursesContainer}>
         {all_courses.map((course) => {
           return (
             <CourseCard
