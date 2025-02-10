@@ -22,8 +22,6 @@ const Navbar = () => {
         <li>
           <Link to="/courses">Courses</Link>
         </li>
-        <li>Tests</li>
-
         <li>
           <Link to="/contactUs/">Contact Us</Link>
         </li>
