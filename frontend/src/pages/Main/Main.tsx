@@ -52,14 +52,26 @@ const Hero = () => {
         <h2>Additional Resources</h2>
         <div className={styles.io}>
           <div className={styles.in}>
-            <img src={resource_in} alt="Coding logo" />
-            <h3>Alumni resources</h3>
-            <p>Take a look at these resources compiled by your alumni</p>
+            <a
+              href="https://www.jjmcoe.ac.in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={resource_in} alt="Coding logo" />
+              <h3>Alumni resources</h3>
+              <p>Take a look at these resources compiled by your alumni</p>
+            </a>
           </div>
           <div className={styles.out}>
-            <img src={resource_out} alt="Contribution banner" />
-            <h3>Contribute</h3>
-            <p>Share the resources you have found useful with your juniors</p>
+            <a
+              href="https://github.com/jjmcoe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={resource_out} alt="Contribution banner" />
+              <h3>Contribute</h3>
+              <p>Share the resources you have found useful with your juniors</p>
+            </a>
           </div>
         </div>
       </section>

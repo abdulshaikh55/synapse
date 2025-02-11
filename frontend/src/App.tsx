@@ -9,6 +9,7 @@ import { AuthProvider } from "./context/AuthContext";
 import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import Courses from "./pages/Courses/Courses";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/signupLogin" element={<SignupLogin />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/surveyForm" element={<SurveyForm />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
