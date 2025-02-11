@@ -9,6 +9,7 @@ import {
 interface AuthContextType {
   isAuthenticated: boolean;
   setIsAuthenticated: (value: boolean) => void;
+  logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -25,8 +26,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [isAuthenticated]);
 
+  const logout = () => {
+    localStorage.removeItem("authToken");
+    setIsAuthenticated(false);
+    // Optionally, redirect to login page or show a message
+  };
+
   return (
-    <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
+    <AuthContext.Provider
+      value={{ isAuthenticated, setIsAuthenticated, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );
