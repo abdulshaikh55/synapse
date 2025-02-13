@@ -9,7 +9,7 @@ const AddCourse = () => {
     image: "",
     tags: [],
     pricing: "",
-    certificate_included: false,
+    certificate_included: "",
     provider: "",
     url: "",
   });
@@ -37,33 +37,21 @@ const AddCourse = () => {
         formData.append("product", image);
       }
 
-      const uploadResponse = await fetch("http://localhost:4000/upload", {
+      const addCourseResponse = await fetch("http://localhost:8080/add", {
         method: "POST",
         headers: {
           Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        body: formData,
+        body: JSON.stringify(product),
       });
 
-      responseData = await uploadResponse.json();
+      responseData = await addCourseResponse.json();
 
       if (responseData?.success) {
-        product.image = responseData.image_url;
-        console.log(product);
-
-        const addProductResponse = await fetch("http://localhost:4000/add", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(product),
-        });
-
-        const addProductData = await addProductResponse.json();
-        addProductData.success
-          ? alert("Course Added!")
-          : alert("Failed to add course.");
+        alert("Course Added!");
+      } else {
+        alert("Failed to add course.");
       }
     } catch (error) {
       console.error("Error adding course:", error);
@@ -88,8 +76,9 @@ const AddCourse = () => {
         <p>Relevant Tags</p>
         <input
           type="text"
-          value={courseDetails.tags.join(", ")}
+          value={courseDetails.tags}
           onChange={changeHandler}
+          name="tags"
           placeholder="Enter relevant tags, separated by commas"
         />
       </div>
@@ -140,9 +129,9 @@ const AddCourse = () => {
               <label className={styles.radioChoice}>
                 <input
                   type="radio"
-                  name="certificateIncluded"
+                  name="certificate_included"
                   value="true"
-                  checked={courseDetails.certificate_included === true}
+                  checked={courseDetails.certificate_included === "true"}
                   onChange={changeHandler}
                 />
                 Yes
@@ -150,9 +139,9 @@ const AddCourse = () => {
               <label className={styles.radioChoice}>
                 <input
                   type="radio"
-                  name="certificateIncluded"
+                  name="certificate_included"
                   value="false"
-                  checked={courseDetails.certificate_included === false}
+                  checked={courseDetails.certificate_included === "false"}
                   onChange={changeHandler}
                 />
                 No
@@ -166,6 +155,7 @@ const AddCourse = () => {
         <p>Provider Name</p>
         <input
           type="text"
+          name="provider"
           value={courseDetails.provider}
           onChange={changeHandler}
           placeholder="Enter the provider name"
@@ -176,6 +166,7 @@ const AddCourse = () => {
         <p>Course URL</p>
         <input
           type="text"
+          name="url"
           value={courseDetails.url}
           onChange={changeHandler}
           placeholder="Enter the course URL"
