@@ -1,0 +1,102 @@
+.addCourse {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 40px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.itemField {
+  margin-bottom: 20px;
+}
+
+.itemField p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="file"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #c3c3c3;
+  outline: none;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background: #6079ff;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #5069d6;
+}
+
+.thumbnailImg {
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 10px 0;
+  border: 1px dashed #c3c3c3;
+}
+
+.dualSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing,
+.certificateIncluded {
+  width: 48%;
+}
+
+.radioChoices {
+  display: flex;
+  flex-direction: column;
+}
+
+.radioChoice {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.selector {
+  padding: 10px;
+  width: 100;
+  height: 50px;
+  font-size: 14px;
+  color: #7b7b7b;
+  border: 1px solid #7b7b7b;
+  border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+  .addCourse {
+    width: 90%;
+    padding: 20px;
+  }
+}
