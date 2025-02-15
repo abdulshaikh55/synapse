@@ -2,7 +2,6 @@ import styles from "./AddCourse.module.css";
 import { useState } from "react";
 
 const AddCourse = () => {
-  const [image, setImage] = useState<File | null>(null);
   const [courseDetails, setCourseDetails] = useState({
     name: "",
     image: "",
@@ -24,11 +23,6 @@ const AddCourse = () => {
       console.log(courseDetails);
       let responseData: any;
       const product = { ...courseDetails };
-
-      const formData = new FormData();
-      if (image) {
-        formData.append("product", image);
-      }
 
       const addCourseResponse = await fetch("http://localhost:8080/add", {
         method: "POST",
