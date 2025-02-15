@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import searchIconDark from "../../assets/search-b.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
@@ -11,6 +11,7 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [searched, setSearched] = useState("");
   const navigate = useNavigate();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleSearchClick = () => {
     navigate("/searchedCourses", {
@@ -18,6 +19,26 @@ const Navbar = () => {
     });
     setSearched("");
   };
+
+  const handleDropdownToggle = () => {
+    setShowDropdown((prev) => !prev);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setShowDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className={styles.navbar}>
@@ -52,8 +73,8 @@ const Navbar = () => {
       </div>
 
       {isAuthenticated ? (
-        <div className={styles.profilePicture}>
-          <button onClick={() => setShowDropdown(!showDropdown)}>
+        <div className={styles.profilePicture} ref={dropdownRef}>
+          <button onClick={handleDropdownToggle}>
             <img src={defaultProfilePic} alt="Profile" />
           </button>
           {showDropdown && <DropDownProfile />}
