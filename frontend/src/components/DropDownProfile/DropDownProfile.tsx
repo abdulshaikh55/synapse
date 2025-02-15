@@ -1,5 +1,6 @@
 import styles from "./DropDownProfile.module.css";
 import { useAuth } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const DropDownProfile = () => {
   const { logout } = useAuth();
@@ -11,7 +12,9 @@ const DropDownProfile = () => {
   return (
     <div className={styles.dropDownProfile}>
       <ul className={styles.dropDownProfileList}>
-        <li className={styles.dropDownProfileListItem}>Profile</li>
+        <Link to={"/user-profile"}>
+          <li className={styles.dropDownProfileListItem}>Profile</li>
+        </Link>
         <li className={styles.dropDownProfileListItem}>Settings</li>
         <li className={styles.dropDownProfileListItem} onClick={handleLogout}>
           Logout

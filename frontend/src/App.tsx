@@ -11,6 +11,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import Courses from "./pages/Courses/Courses";
 import About from "./pages/About/About";
 import SearchedCourses from "./pages/SearchedCourses/SearchedCourses";
+import UserProfile from "./pages/UserProfile/UserProfile";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/searchedCourses" element={<SearchedCourses />} />
+          <Route path="/user-profile" element={<UserProfile />} />
         </Routes>
         <Footer />
       </BrowserRouter>
