@@ -1,0 +1,31 @@
+.searchedCourses {
+  margin: 1rem 3rem;
+}
+
+.coursesContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.courseCard {
+  flex: 1 1 300px;
+  max-width: 22rem;
+}
+
+@media (max-width: 768px) {
+  .allCourse {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .allCourse {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+}

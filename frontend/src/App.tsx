@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import Courses from "./pages/Courses/Courses";
 import About from "./pages/About/About";
+import SearchedCourses from "./pages/SearchedCourses/SearchedCourses";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/surveyForm" element={<SurveyForm />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/searchedCourses" element={<SearchedCourses />} />
         </Routes>
         <Footer />
       </BrowserRouter>

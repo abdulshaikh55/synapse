@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.css";
 import { useState } from "react";
 import searchIconDark from "../../assets/search-b.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import defaultProfilePic from "../../assets/default_profile.png";
 import DropDownProfile from "../DropDownProfile/DropDownProfile";
@@ -9,6 +9,15 @@ import DropDownProfile from "../DropDownProfile/DropDownProfile";
 const Navbar = () => {
   const { isAuthenticated } = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
+  const [searched, setSearched] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearchClick = () => {
+    navigate("/searchedCourses", {
+      state: { searchTerm: searched },
+    });
+    setSearched("");
+  };
 
   return (
     <div className={styles.navbar}>
@@ -28,8 +37,18 @@ const Navbar = () => {
       </ul>
 
       <div className={styles.searchBox}>
-        <input type="text" placeholder="Search..." />
-        <img src={searchIconDark} alt="search icon" />
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searched}
+          onChange={(e) => setSearched(e.target.value)}
+          onKeyPress={(e) => e.key === "Enter" && handleSearchClick()}
+        />
+        <img
+          src={searchIconDark}
+          alt="search icon"
+          onClick={handleSearchClick}
+        />
       </div>
 
       {isAuthenticated ? (
