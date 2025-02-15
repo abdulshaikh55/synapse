@@ -1,5 +1,4 @@
 import styles from "./AddCourse.module.css";
-import upload_area from "../../assets/upload_area.svg";
 import { useState } from "react";
 
 const AddCourse = () => {
@@ -7,18 +6,12 @@ const AddCourse = () => {
   const [courseDetails, setCourseDetails] = useState({
     name: "",
     image: "",
-    tags: [],
+    tags: "",
     pricing: "",
     certificate_included: "",
     provider: "",
     url: "",
   });
-
-  const imageHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setImage(e.target.files[0]);
-    }
-  };
 
   const changeHandler = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -173,22 +166,6 @@ const AddCourse = () => {
         />
       </div>
 
-      <div className={styles.itemField}>
-        <label htmlFor="file-input">
-          <img
-            src={image ? URL.createObjectURL(image) : upload_area}
-            alt="upload image"
-            className={styles.thumbnailImg}
-          />
-        </label>
-        <input
-          onChange={imageHandler}
-          type="file"
-          name="image"
-          id="file-input"
-          hidden
-        />
-      </div>
       <button onClick={addCourse}>Add Course</button>
     </div>
   );
