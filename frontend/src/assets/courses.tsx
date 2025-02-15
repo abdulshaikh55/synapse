@@ -27,11 +27,42 @@ import c26_img from "./course_img26.jpg";
 import c27_img from "./course_img27.jpg";
 import c28_img from "./course_img28.jpg";
 import c29_img from "./course_img29.jpg";
+import c30_img from "./course_img30.jpg";
+import c31_img from "./course_img31.jpg";
+import c32_img from "./course_img32.jpg";
+import c33_img from "./course_img33.jpg";
+import c34_img from "./course_img34.jpg";
+import c35_img from "./course_img35.jpg";
+import c36_img from "./course_img36.jpg";
+import c37_img from "./course_img37.jpg";
+import c38_img from "./course_img38.jpg";
+import c39_img from "./course_img39.jpg";
+import c40_img from "./course_img40.jpg";
+import c41_img from "./course_img41.jpg";
+import c42_img from "./course_img42.jpg";
+import c43_img from "./course_img43.jpg";
+import c44_img from "./course_img44.jpg";
+import c45_img from "./course_img45.jpg";
+import c46_img from "./course_img46.jpg";
+import c47_img from "./course_img47.jpg";
+import c48_img from "./course_img48.jpg";
+import c49_img from "./course_img49.jpg";
+import c50_img from "./course_img50.jpg";
+import c51_img from "./course_img51.jpg";
+import c52_img from "./course_img52.jpg";
+import c53_img from "./course_img53.jpg";
+import c54_img from "./course_img54.jpg";
+import c55_img from "./course_img55.jpg";
+import c56_img from "./course_img56.jpg";
+import c57_img from "./course_img57.jpg";
+import c58_img from "./course_img58.jpg";
+import c59_img from "./course_img59.jpg";
+import c60_img from "./course_img60.jpg";
 
 const courses = [
   {
     id: 1,
-    name: "Machine Learning In Python Environment",
+    name: "Machine Learning in Python Environment",
     image: c1_img,
     tags: [
       "machine_learning",
@@ -357,6 +388,357 @@ const courses = [
     certificate_included: true,
     provider: "linuxfoundation.org",
     url: "https://linuxfoundation.org/learn/linux",
+  },
+
+  {
+    id: 30,
+    name: "TensorFlow for Deep Learning",
+    image: c30_img,
+    tags: ["tensorflow", "deep_learning", "ai", "neural_networks"],
+    pricing: "free",
+    certificate_included: true,
+    provider: "coursera.org",
+    url: "https://coursera.org/course/tensorflow-for-deep-learning",
+  },
+
+  {
+    id: 31,
+    name: "Deep Learning Fundamentals",
+    image: c31_img,
+    tags: [
+      "deep_learning",
+      "introduction",
+      "neural_networks",
+      "ai",
+      "tensorflow",
+    ],
+    pricing: "free",
+    certificate_included: true,
+    provider: "coursera.org",
+    url: "https://coursera.org/course/deep-learning-fundamentals",
+  },
+  {
+    id: 32,
+    name: "Data Science with Python",
+    image: c32_img,
+    tags: ["data_science", "python", "pandas", "numpy", "matplotlib"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "udemy.com",
+    url: "https://udemy.com/course/data-science-with-python",
+  },
+  {
+    id: 33,
+    name: "Artificial Intelligence for Beginners",
+    image: c33_img,
+    tags: [
+      "ai",
+      "beginner",
+      "machine_learning",
+      "deep_learning",
+      "neural_networks",
+    ],
+    pricing: "free",
+    certificate_included: true,
+    provider: "edx.org",
+    url: "https://edx.org/course/artificial-intelligence-for-beginners",
+  },
+  {
+    id: 34,
+    name: "Python for Data Analysis",
+    image: c34_img,
+    tags: ["python", "data_analysis", "pandas", "numpy", "data_visualization"],
+    pricing: "free",
+    certificate_included: false,
+    provider: "kaggle.com",
+    url: "https://kaggle.com/course/python-for-data-analysis",
+  },
+  {
+    id: 35,
+    name: "SQL for Data Science",
+    image: c35_img,
+    tags: ["sql", "data_science", "database", "queries", "data_management"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "datacamp.com",
+    url: "https://datacamp.com/course/sql-for-data-science",
+  },
+  {
+    id: 36,
+    name: "Big Data with Hadoop",
+    image: c36_img,
+    tags: ["big_data", "hadoop", "spark", "data_engineering"],
+    pricing: "free",
+    certificate_included: false,
+    provider: "udacity.com",
+    url: "https://udacity.com/course/big-data-with-hadoop",
+  },
+  {
+    id: 37,
+    name: "Computer Vision with OpenCV",
+    image: c37_img,
+    tags: ["computer_vision", "opencv", "image_processing", "deep_learning"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "pluralsight.com",
+    url: "https://pluralsight.com/course/computer-vision-opencv",
+  },
+  {
+    id: 38,
+    name: "Reinforcement Learning in Python",
+    image: c38_img,
+    tags: ["reinforcement_learning", "machine_learning", "ai", "gym", "python"],
+    pricing: "free",
+    certificate_included: true,
+    provider: "fast.ai",
+    url: "https://fast.ai/course/reinforcement-learning",
+  },
+  {
+    id: 39,
+    name: "Ethical Hacking for Beginners",
+    image: c39_img,
+    tags: [
+      "ethical_hacking",
+      "cybersecurity",
+      "penetration_testing",
+      "network_security",
+    ],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "cybrary.it",
+    url: "https://cybrary.it/course/ethical-hacking-beginners",
+  },
+  {
+    id: 40,
+    name: "Blockchain and Cryptocurrency",
+    image: c40_img,
+    tags: [
+      "blockchain",
+      "cryptocurrency",
+      "bitcoin",
+      "ethereum",
+      "smart_contracts",
+    ],
+    pricing: "free",
+    certificate_included: false,
+    provider: "futurelearn.com",
+    url: "https://futurelearn.com/course/blockchain-cryptocurrency",
+  },
+  {
+    id: 41,
+    name: "Software Development Lifecycle",
+    image: c41_img,
+    tags: ["software_development", "sdlc", "project_management", "agile"],
+    pricing: "free",
+    certificate_included: true,
+    provider: "udemy.com",
+    url: "https://udemy.com/course/software-development-lifecycle",
+  },
+  {
+    id: 42,
+    name: "Introduction to Cloud Computing",
+    image: c42_img,
+    tags: ["cloud_computing", "aws", "azure", "google_cloud", "cloud_services"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "coursera.org",
+    url: "https://coursera.org/course/cloud-computing",
+  },
+  {
+    id: 43,
+    name: "Cybersecurity Fundamentals",
+    image: c43_img,
+    tags: [
+      "cybersecurity",
+      "network_security",
+      "ethical_hacking",
+      "cryptography",
+    ],
+    pricing: "free",
+    certificate_included: true,
+    provider: "edx.org",
+    url: "https://edx.org/course/cybersecurity-fundamentals",
+  },
+  {
+    id: 44,
+    name: "Web Development with React",
+    image: c44_img,
+    tags: ["web_development", "react", "frontend", "javascript", "ui"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "udemy.com",
+    url: "https://udemy.com/course/react-web-development",
+  },
+  {
+    id: 45,
+    name: "Natural Language Processing with Python",
+    image: c45_img,
+    tags: [
+      "nlp",
+      "natural_language_processing",
+      "machine_learning",
+      "text_analysis",
+    ],
+    pricing: "free",
+    certificate_included: false,
+    provider: "fast.ai",
+    url: "https://fast.ai/course/nlp",
+  },
+  {
+    id: 46,
+    name: "JavaScript Essentials",
+    image: c46_img,
+    tags: ["javascript", "frontend", "web_development", "es6"],
+    pricing: "free",
+    certificate_included: false,
+    provider: "codecademy.com",
+    url: "https://codecademy.com/course/javascript-essentials",
+  },
+
+  {
+    id: 47,
+    name: "Full Stack Web Development",
+    image: c47_img,
+    tags: ["web_development", "full_stack", "node.js", "react", "mongodb"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "coursera.org",
+    url: "https://coursera.org/course/full-stack-web-development",
+  },
+  {
+    id: 48,
+    name: "Linux for Beginners",
+    image: c48_img,
+    tags: ["linux", "command_line", "bash", "sysadmin"],
+    pricing: "free",
+    certificate_included: false,
+    provider: "udemy.com",
+    url: "https://udemy.com/course/linux-for-beginners",
+  },
+  {
+    id: 49,
+    name: "C++ Programming for Beginners",
+    image: c49_img,
+    tags: ["c++", "programming", "oop", "beginner"],
+    pricing: "free",
+    certificate_included: true,
+    provider: "edx.org",
+    url: "https://edx.org/course/cpp-programming-beginners",
+  },
+  {
+    id: 50,
+    name: "Java Programming Masterclass",
+    image: c50_img,
+    tags: ["java", "oop", "backend", "spring_boot"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "udemy.com",
+    url: "https://udemy.com/course/java-programming-masterclass",
+  },
+  {
+    id: 51,
+    name: "Kubernetes for DevOps",
+    image: c51_img,
+    tags: ["kubernetes", "devops", "docker", "cloud"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "pluralsight.com",
+    url: "https://pluralsight.com/course/kubernetes-for-devops",
+  },
+  {
+    id: 52,
+    name: "Game Development with Unity",
+    image: c52_img,
+    tags: ["game_development", "unity", "c#", "3d_games"],
+    pricing: "free",
+    certificate_included: false,
+    provider: "coursera.org",
+    url: "https://coursera.org/course/unity-game-development",
+  },
+  {
+    id: 53,
+    name: "IoT Fundamentals",
+    image: c53_img,
+    tags: ["iot", "embedded_systems", "raspberry_pi", "arduino"],
+    pricing: "free",
+    certificate_included: true,
+    provider: "udacity.com",
+    url: "https://udacity.com/course/iot-fundamentals",
+  },
+  {
+    id: 54,
+    name: "Git & GitHub for Developers",
+    image: c54_img,
+    tags: ["git", "github", "version_control", "collaboration"],
+    pricing: "free",
+    certificate_included: false,
+    provider: "codecademy.com",
+    url: "https://codecademy.com/course/git-and-github",
+  },
+  {
+    id: 55,
+    name: "Docker Essentials",
+    image: c55_img,
+    tags: ["docker", "containers", "devops", "virtualization"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "edx.org",
+    url: "https://edx.org/course/docker-essentials",
+  },
+  {
+    id: 56,
+    name: "Microsoft Excel for Data Analysis",
+    image: c56_img,
+    tags: ["excel", "data_analysis", "spreadsheets", "pivot_tables"],
+    pricing: "free",
+    certificate_included: true,
+    provider: "coursera.org",
+    url: "https://coursera.org/course/excel-for-data-analysis",
+  },
+  {
+    id: 57,
+    name: "Cyber Threat Intelligence",
+    image: c57_img,
+    tags: [
+      "cybersecurity",
+      "threat_intelligence",
+      "malware_analysis",
+      "hacking",
+    ],
+    pricing: "free",
+    certificate_included: false,
+    provider: "cybrary.it",
+    url: "https://cybrary.it/course/cyber-threat-intelligence",
+  },
+  {
+    id: 58,
+    name: "MATLAB for Engineers",
+    image: c58_img,
+    tags: ["matlab", "engineering", "simulation", "programming"],
+    pricing: "paid",
+    certificate_included: true,
+    provider: "udemy.com",
+    url: "https://udemy.com/course/matlab-for-engineers",
+  },
+  {
+    id: 59,
+    name: "Agile & Scrum for Project Management",
+    image: c59_img,
+    tags: ["agile", "scrum", "project_management", "software_development"],
+    pricing: "free",
+    certificate_included: true,
+    provider: "edx.org",
+    url: "https://edx.org/course/agile-and-scrum",
+  },
+  {
+    id: 60,
+    name: "Project Management",
+    image: c60_img,
+    tags: ["phases_of_project", "planning", "initiation"],
+    pricing: "free",
+    certificate_included: true,
+    provide: "mygreatlearning.com",
+    url: "https://www.mygreatlearning.com/academy/learn-for-free/courses/project-management",
   },
 ];
 
