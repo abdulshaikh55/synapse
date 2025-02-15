@@ -19,4 +19,4 @@ const courseValidation = (req, res, next) => {
   next();
 };
 
-module.exports = { courseValidation };
+module.exports = courseValidation;
