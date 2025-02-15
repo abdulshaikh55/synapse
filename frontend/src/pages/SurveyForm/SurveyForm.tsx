@@ -46,7 +46,7 @@ export const SurveyForm = () => {
     }
   };
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     if (
       currentSection === "required" &&
       currentPage ===
@@ -54,7 +54,6 @@ export const SurveyForm = () => {
     ) {
       setCurrentSection("informative");
       setCurrentPage(0);
-      scrollToTop();
     } else if (
       currentSection === "informative" &&
       currentPage ===
@@ -63,7 +62,6 @@ export const SurveyForm = () => {
       console.log("Final submission:", data);
     } else {
       setCurrentPage((prev) => prev + 1);
-      scrollToTop();
     }
   };
 
