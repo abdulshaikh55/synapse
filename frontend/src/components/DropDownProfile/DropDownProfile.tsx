@@ -16,9 +16,7 @@ const DropDownProfile = () => {
           <li className={styles.dropDownProfileListItem}>Profile</li>
         </Link>
         <li className={styles.dropDownProfileListItem}>Settings</li>
-        <li className={styles.dropDownProfileListItem} onClick={handleLogout}>
-          Logout
-        </li>
+        <li className={styles.dropDownProfileListItem} onClick={handleLogout}>Logout</li>
       </ul>
     </div>
   );

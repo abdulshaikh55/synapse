@@ -29,6 +29,8 @@ const About = () => {
         recommendation systems can help students in focusing on their interests
         rather than external noise of overinformation and overcourses.
       </p>
+
+      <p>Check out the code at the <a href="https://www.github.com/abdulshaikh55/synapse">GitHub</a> repo!</p>
     </div>
   );
 };

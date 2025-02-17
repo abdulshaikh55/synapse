@@ -9,7 +9,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: var(--background-color);
 
   &:hover {
     transform: translateY(-5px);
@@ -28,6 +28,7 @@
   font-weight: 600;
   font-size: 1.2rem;
   display: -webkit-box;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -60,7 +61,7 @@
 
   &:hover {
     background-color: var(--hover-color);
-    color: #ffffff;
+    color: var(--btn-text-color);
   }
 }
 

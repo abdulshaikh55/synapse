@@ -76,7 +76,7 @@
 }
 
 .submitButton {
-  background-color: #242424;
+  background-color: var(--btn-background-color);
   color: white;
   font-weight: 700;
   padding: 0.625rem 1rem;
@@ -130,11 +130,11 @@
 .socialIcons a {
   color: #242424;
   font-size: 2rem;
-  transition: color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .socialIcons a:hover {
-  color: var(--hover-color);
+  transform: scale(1.1);
 }
 
 @media (min-width: 640px) {
