@@ -14,15 +14,13 @@ const Navbar = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleSearchClick = () => {
-    navigate("/searchedCourses", {
-      state: { searchTerm: searched },
-    });
-    setSearched("");
+    if (searched.trim()) {
+      navigate("/searchedCourses", { state: { searchTerm: searched } });
+      setSearched("");
+    }
   };
 
-  const handleDropdownToggle = () => {
-    setShowDropdown((prev) => !prev);
-  };
+  const handleDropdownToggle = () => setShowDropdown((prev) => !prev);
 
   const handleClickOutside = (event: MouseEvent) => {
     if (
@@ -35,17 +33,13 @@ const Navbar = () => {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <div className={styles.navbar}>
-      <Link to="/">
-        <div className={styles.logo}>
-          <p>Synapse</p>
-        </div>
+      <Link to="/" className={styles.logo}>
+        <p>Synapse</p>
       </Link>
 
       <ul>
@@ -80,10 +74,8 @@ const Navbar = () => {
           {showDropdown && <DropDownProfile />}
         </div>
       ) : (
-        <Link to="/signupLogin">
-          <div className={styles.loginSignupButton}>
-            <button>Login / Signup</button>
-          </div>
+        <Link to="/signupLogin" className={styles.loginSignupButton}>
+          <button>Login / Signup</button>
         </Link>
       )}
     </div>

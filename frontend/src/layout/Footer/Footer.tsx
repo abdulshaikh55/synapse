@@ -8,6 +8,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
+  const socialLinks = [
+    { href: "https://www.instagram.com", icon: faInstagram },
+    { href: "https://www.linkedin.com", icon: faLinkedin },
+    { href: "https://www.facebook.com", icon: faFacebook },
+  ];
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerLinks}>
@@ -23,27 +29,16 @@ const Footer = () => {
       </div>
       <div className={styles.socialLinks}>
         <div className={styles.socialIcons}>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon className={styles.socialIcon} icon={faInstagram} />
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon className={styles.socialIcon} icon={faLinkedin} />
-          </a>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon className={styles.socialIcon} icon={faFacebook} />
-          </a>
+          {socialLinks.map(({ href, icon }, index) => (
+            <a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon className={styles.socialIcon} icon={icon} />
+            </a>
+          ))}
         </div>
       </div>
     </footer>

@@ -8,9 +8,7 @@ type Inputs = {
 };
 
 export const SurveyForm = () => {
-  const [currentSection, setCurrentSection] = useState<
-    "required" | "informative"
-  >("required");
+  const [currentSection, setCurrentSection] = useState<"required" | "informative">("required");
   const [currentPage, setCurrentPage] = useState(0);
 
   const {
@@ -20,17 +18,11 @@ export const SurveyForm = () => {
   } = useForm<Inputs>();
 
   const questionsPerPage = 5;
-  const currentQuestions =
-    currentSection === "required"
-      ? questions.required_questions
-      : questions.informative_questions;
+  const currentQuestions = currentSection === "required" ? questions.required_questions : questions.informative_questions;
 
   const totalPages = Math.ceil(currentQuestions.length / questionsPerPage);
   const startIndex = currentPage * questionsPerPage;
-  const displayedQuestions = currentQuestions.slice(
-    startIndex,
-    startIndex + questionsPerPage
-  );
+  const displayedQuestions = currentQuestions.slice(startIndex, startIndex + questionsPerPage);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -39,39 +31,30 @@ export const SurveyForm = () => {
   const handlePreviousSection = () => {
     if (currentSection === "informative") {
       setCurrentSection("required");
-      setCurrentPage(
-        Math.ceil(questions.required_questions.length / questionsPerPage) - 1
-      );
+      setCurrentPage(Math.ceil(questions.required_questions.length / questionsPerPage) - 1);
       scrollToTop();
     }
   };
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    if (
-      currentSection === "required" &&
-      currentPage ===
-        Math.ceil(questions.required_questions.length / questionsPerPage) - 1
-    ) {
+    if (currentSection === "required" && currentPage === Math.ceil(questions.required_questions.length / questionsPerPage) - 1) {
       setCurrentSection("informative");
       setCurrentPage(0);
-    } else if (
-      currentSection === "informative" &&
-      currentPage ===
-        Math.ceil(questions.informative_questions.length / questionsPerPage) - 1
-    ) {
+    } else if (currentSection === "informative" && currentPage === Math.ceil(questions.informative_questions.length / questionsPerPage) - 1) {
       console.log("Final submission:", data);
     } else {
       setCurrentPage((prev) => prev + 1);
     }
+    console.log(errors);
   };
 
-  const renderQuestion = (question: any) => {
+  const renderQuestion = (question: { id: string; type: string; question: string; option_array: string[]; other?: boolean }) => {
     switch (question.type) {
       case "radio":
         return (
           <div className={styles.questionItem}>
             <p className={styles.questionText}>{question.question}</p>
-            {question.option_array.map((option: string) => (
+            {question.option_array.map((option) => (
               <div key={option} className={styles.radioOption}>
                 <input
                   type="radio"
@@ -98,7 +81,7 @@ export const SurveyForm = () => {
         return (
           <div className={styles.questionItem}>
             <p className={styles.questionText}>{question.question}</p>
-            {question.option_array.map((option: string) => (
+            {question.option_array.map((option) => (
               <div key={option} className={styles.checkboxOption}>
                 <input
                   type="checkbox"
@@ -137,9 +120,7 @@ export const SurveyForm = () => {
   return (
     <div className={styles.surveyForm}>
       <h2 className={styles.sectionTitle}>
-        {currentSection === "required"
-          ? "Required Questions"
-          : "Additional Information"}
+        {currentSection === "required" ? "Required Questions" : "Additional Information"}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         {displayedQuestions.map((question) => (
@@ -153,12 +134,12 @@ export const SurveyForm = () => {
             <button
               type="button"
               onClick={() => {
-                currentPage > 0
-                  ? setCurrentPage((prev) => {
-                      scrollToTop();
-                      return prev - 1;
-                    })
-                  : handlePreviousSection();
+                if (currentPage > 0) {
+                  scrollToTop();
+                  setCurrentPage((prev) => prev - 1);
+                } else {
+                  handlePreviousSection();
+                }
               }}
               className={styles.navButton}
             >
@@ -166,9 +147,7 @@ export const SurveyForm = () => {
             </button>
           )}
           <button type="submit" className={styles.navButton}>
-            {currentSection === "informative" && currentPage === totalPages - 1
-              ? "Submit"
-              : "Next"}
+            {currentSection === "informative" && currentPage === totalPages - 1 ? "Submit" : "Next"}
           </button>
         </div>
       </form>

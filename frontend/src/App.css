@@ -2,15 +2,18 @@
   max-width: 100dvw;
 }
 :root {
-    --background-color : #fff;
-    --hover-color        : #0987f2;
-    --btn-color: #000;
-    --link-color        : #0987f2;
-    --btn-text-color   : #fff;
-    --project-card-bg  : #ffffff00;
-    --text-color       : #222;
-    --form-text-color  : #555;
-    --footer-text-color: #888;
+  --background-color: #fff;
+  --secondary-background-color: #242424;
+  --hover-color: #0987f2;
+  --btn-text-color: #fff;
+  --btn-background-color: #242424;
+  --btn-hover-color: #0987f2;
+  --link-color: #0987f2;
+  --project-card-bg: #ffffff00;
+  --text-color: #222;
+  --secondary-text-color: #fff;
+  --form-text-color: #555;
+  --footer-text-color: #888;
 }
 
 h1 {

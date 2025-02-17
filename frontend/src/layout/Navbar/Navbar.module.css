@@ -1,7 +1,6 @@
 .navbar {
   width: 100%;
   display: flex;
-  box-sizing: border-box;
   align-items: center;
   padding: 0.75rem 1.5rem;
   background: rgba(255, 255, 255, 0.95);
@@ -41,7 +40,7 @@
       font-size: 0.95rem;
       font-weight: 500;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: color 0.2s ease;
       position: relative;
       padding: 0.5rem 0;
 
@@ -72,8 +71,9 @@
     background: #f3f4f6;
     padding: 0.5rem 1rem;
     border-radius: 12px;
-    transition: all 0.2s ease;
     border: 1px solid transparent;
+    transition: background 0.2s ease, border-color 0.2s ease,
+      box-shadow 0.2s ease;
 
     &:focus-within {
       background: #fff;
@@ -95,8 +95,8 @@
     input {
       padding: 0.25rem 0.5rem;
       background: transparent;
-      border: 0;
-      outline: 0;
+      border: none;
+      outline: none;
       color: #1f2937;
       font-size: 0.95rem;
       width: 140px;
@@ -121,7 +121,7 @@
     background: #242424;
     border-radius: 12px;
     margin-left: 1.5rem;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     border: 1px solid transparent;
 
     &:hover {
@@ -146,7 +146,7 @@
     cursor: pointer;
     margin-left: 1rem;
     opacity: 0.8;
-    transition: all 0.2s ease;
+    transition: opacity 0.2s ease, background 0.2s ease;
     padding: 0.5rem;
     border-radius: 8px;
 
@@ -199,7 +199,6 @@
     }
 
     ul {
-      /* gap: 1rem; */
       margin: 0 1rem;
     }
 

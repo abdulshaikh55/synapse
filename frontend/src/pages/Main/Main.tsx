@@ -12,7 +12,7 @@ const Hero = () => {
       <Survey />
 
       <div className={styles.banners}>
-        <img src={banner} alt="Wow" />
+        <img src={banner} alt="Banner" />
       </div>
 
       <Popular />

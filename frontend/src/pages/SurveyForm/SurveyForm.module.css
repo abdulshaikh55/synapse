@@ -43,20 +43,20 @@
   cursor: pointer;
 }
 
-.otherOption input {
+.otherOption input,
+.textArea {
   width: 100%;
   padding: 0.5rem;
-  margin-top: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
+.otherOption input {
+  margin-top: 0.5rem;
+}
+
 .textArea {
-  width: 100%;
   min-height: 100px;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
   resize: vertical;
 }
 
@@ -68,9 +68,9 @@
 }
 
 .navButton {
-  padding: 0.70rem 1.4rem;
+  padding: 0.7rem 1.4rem;
   background-color: var(--hover-color);
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;

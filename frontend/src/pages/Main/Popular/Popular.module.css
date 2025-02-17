@@ -1,5 +1,11 @@
+.popular {
+  h2 {
+    margin-bottom: 9px;
+  }
+}
+
 hr {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   border: 0.125rem solid #242424;
   width: 100%;
 }
@@ -10,7 +16,7 @@ hr {
   /* https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe */
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
