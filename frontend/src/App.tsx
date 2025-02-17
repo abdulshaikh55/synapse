@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./layout/Navbar/Navbar";
 import "./App.css";
 import Main from "./pages/Main/Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -6,7 +6,7 @@ import SignupLogin from "./pages/SignupLogin/SignupLogin";
 import Contact from "./pages/ContactUs/Contact";
 import { SurveyForm } from "./pages/SurveyForm/SurveyForm";
 import { AuthProvider } from "./context/AuthContext";
-import Footer from "./components/Footer/Footer";
+import Footer from "./layout/Footer/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import Courses from "./pages/Courses/Courses";
 import About from "./pages/About/About";

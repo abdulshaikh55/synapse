@@ -1,11 +1,11 @@
-import c1_img from './course_img1.jpg';
-import c2_img from './course_img2.jpg';
-import c3_img from './course_img3.jpg';
-import c4_img from './course_img4.jpg';
+import c1_img from './../assets/course_img1.jpg';
+import c2_img from './../assets/course_img2.jpg';
+import c3_img from './../assets/course_img3.jpg';
+import c4_img from './../assets/course_img4.jpg';
 // import c5_img from './course_img5.jpg';
 // import c6_img from './course_img6.jpg';
 
-let popular_courses = [
+const popular_courses = [
   {
     id: 1,
     name: "Machine Learning In Python Environment",

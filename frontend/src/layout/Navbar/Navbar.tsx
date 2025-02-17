@@ -4,7 +4,7 @@ import searchIconDark from "../../assets/search-b.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import defaultProfilePic from "../../assets/default_profile.png";
-import DropDownProfile from "../DropDownProfile/DropDownProfile";
+import DropDownProfile from "./../../components/DropDownProfile/DropDownProfile";
 
 const Navbar = () => {
   const { isAuthenticated } = useAuth();

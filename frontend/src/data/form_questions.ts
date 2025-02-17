@@ -5,7 +5,7 @@
 // other: does it need to provide a section to get response for option that may not be present in the option
 
 
-let required_questions = [
+const required_questions = [
   {
     id: 1,
     question: "What is your engineering branch?",
@@ -79,7 +79,7 @@ let required_questions = [
   }
 ]
 
-let informative_questions = [
+const informative_questions = [
   {
     id: 6,
     question: "Which of the following career roles align with your goals?",
