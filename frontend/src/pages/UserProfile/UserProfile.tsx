@@ -1,6 +1,6 @@
 import styles from "./UserProfile.module.css";
 import user from "./user_profile";
-import courses from "../../assets/courses";
+import courses from "../../data/courses";
 import CourseCard from "../../components/CourseCard/CourseCard";
 
 const UserProfile = () => {

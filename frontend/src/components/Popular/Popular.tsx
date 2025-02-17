@@ -1,5 +1,5 @@
 import styles from "./Popular.module.css";
-import popular_courses from "../../assets/popular_courses";
+import popular_courses from "../../data/popular_courses";
 import CourseCard from "../CourseCard/CourseCard";
 
 const Popular = () => {

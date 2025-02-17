@@ -1,7 +1,7 @@
 import styles from "./SearchedCourses.module.css";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import coursesData from "../../assets/courses";
+import coursesData from "../../data/courses";
 import CourseCard from "../../components/CourseCard/CourseCard";
 
 interface Course {

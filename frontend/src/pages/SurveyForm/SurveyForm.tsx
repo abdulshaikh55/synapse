@@ -1,6 +1,6 @@
 import styles from "./SurveyForm.module.css";
 import { useForm, SubmitHandler } from "react-hook-form";
-import questions from "../../assets/form_questions";
+import questions from "../../data/form_questions";
 import { useState } from "react";
 
 type Inputs = {

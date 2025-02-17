@@ -1,6 +1,6 @@
 import styles from "./Courses.module.css";
 import CourseCard from "../../components/CourseCard/CourseCard";
-import all_courses from "../../assets/courses";
+import all_courses from "../../data/courses";
 
 const Courses = () => {
   return (
