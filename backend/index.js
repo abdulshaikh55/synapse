@@ -4,9 +4,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const AuthRouter = require("./routes/authRouter.js");
 const courseRouter = require("./routes/courseRouter.js");
+const connectDB = require('./models/db.js');
 
 require('dotenv').config()
-const { connectDB } = require('./models/db.js');
 
 const PORT = process.env.PORT || 8080;
 
