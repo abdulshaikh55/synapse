@@ -4,8 +4,7 @@ import { useState } from "react";
 const AddCourse = () => {
   const [courseDetails, setCourseDetails] = useState({
     name: "",
-    image: "",
-    tags: "",
+    tags: [],
     pricing: "",
     certificate_included: "",
     provider: "",
@@ -15,16 +14,21 @@ const AddCourse = () => {
   const changeHandler = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setCourseDetails({ ...courseDetails, [e.target.name]: e.target.value });
+    e.preventDefault();
+    const { name, value } = e.target;
+    setCourseDetails({ ...courseDetails, [name]: value });
   };
 
   const addCourse = async () => {
+    const array: string = courseDetails.tags.toString();
     try {
       console.log(courseDetails);
-      let responseData: any;
-      const product = { ...courseDetails };
+      const product = {
+        ...courseDetails,
+        tags: array.split(",").map(tag => tag.trim()).filter(tag => tag !== ""),
+      };
 
-      const addCourseResponse = await fetch("http://localhost:8080/add", {
+      const addCourseResponse = await fetch("http://localhost:8080/admin/add", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -33,16 +37,12 @@ const AddCourse = () => {
         body: JSON.stringify(product),
       });
 
-      responseData = await addCourseResponse.json();
+      const responseData = await addCourseResponse.json();
 
-      if (responseData?.success) {
-        alert("Course Added!");
-      } else {
-        alert("Failed to add course.");
-      }
+      alert(responseData.message);
     } catch (error) {
       console.error("Error adding course:", error);
-      alert("An error occurred while adding the course.");
+      alert("An error occurred while adding the course. ⚠️");
     }
   };
 
