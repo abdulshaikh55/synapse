@@ -1,0 +1,36 @@
+.suggested {
+  h2 {
+    margin-bottom: 9px;
+  }
+}
+
+hr {
+  margin-bottom: 0.5rem;
+  border: 0.125rem solid #242424;
+  width: 100%;
+}
+
+.suggestedCourse {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .suggestedCourse {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .suggestedCourse {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+}

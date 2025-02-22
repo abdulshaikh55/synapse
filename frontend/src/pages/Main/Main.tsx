@@ -5,6 +5,7 @@ import Popular from "./Popular/Popular";
 import yami_quote from "../../assets/yami_quote.png";
 import resource_in from "../../assets/coding_banner.jpg";
 import resource_out from "../../assets/contribute_banner.jpg";
+import Suggested from "./Suggested/Suggested";
 
 const Hero = () => {
   return (
@@ -47,6 +48,8 @@ const Hero = () => {
           <img src={yami_quote} alt="Quote" />
         </div>
       </section>
+
+      <Suggested />
 
       <section className={styles.additionalResources}>
         <h2>Additional Resources</h2>
