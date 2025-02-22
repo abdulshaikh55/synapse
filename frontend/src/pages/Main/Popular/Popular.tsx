@@ -1,5 +1,5 @@
 import styles from "./Popular.module.css";
-import popular_courses from "../../../data/popular_courses";
+import courses from "../../../data/courses";
 import CourseCard from "../../../components/CourseCard/CourseCard";
 
 const Popular = () => {
@@ -9,9 +9,10 @@ const Popular = () => {
       <hr />
 
       <div className={styles.popularCourse}>
-        {popular_courses.map((course) => {
+        {courses.slice(0, 4).map((course) => {
           return (
             <CourseCard
+              key={course.id}
               id={course.id}
               name={course.name}
               tags={course.tags}
