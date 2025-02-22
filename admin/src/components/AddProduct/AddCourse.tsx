@@ -1,7 +1,10 @@
 import styles from "./AddCourse.module.css";
 import { useState } from "react";
+import upload_area from "../../assets/upload_area.svg";
 
 const AddCourse = () => {
+  const [image, setImage] = useState<File | null>(null);
+  const [file, setFile] = useState<File | null>(null);
   const [courseDetails, setCourseDetails] = useState({
     name: "",
     tags: [],
@@ -10,6 +13,17 @@ const AddCourse = () => {
     provider: "",
     url: "",
   });
+
+  const imageHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const file = e.target.files?.[0];
+    if (file) {
+      setImage(file);
+      setFile(file);
+    } else {
+      alert("No file selected. Please choose an image file.");
+    }
+  };
 
   const changeHandler = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -20,7 +34,23 @@ const AddCourse = () => {
   };
 
   const addCourse = async () => {
+    // Validate required fields
+    if (!courseDetails.name || !courseDetails.provider || !courseDetails.url) {
+      alert("Please fill in all required fields: Course Title, Provider Name, and Course URL.");
+      return;
+    }
+
     const array: string = courseDetails.tags.toString();
+    const data = new FormData();
+
+    if (file) {
+      data.append("file", file); // Changed from "image" to "file"
+    } else {
+      alert("Please select an image file to upload.");
+      return;
+    }
+    data.append('upload_preset', 'synapse');
+    data.append('cloud_name', 'du8gajum1');
     try {
       console.log(courseDetails);
       const product = {
@@ -37,8 +67,15 @@ const AddCourse = () => {
         body: JSON.stringify(product),
       });
 
-      const responseData = await addCourseResponse.json();
+      const uploadImageResponse = await fetch("https://api.cloudinary.com/v1_1/du8gajum1/image/upload", {
+        method: "POST",
+        body: data
+      });
 
+      const responseData = await addCourseResponse.json();
+      const uploadImageData = await uploadImageResponse.json();
+
+      console.log(uploadImageData);
       alert(responseData.message);
     } catch (error) {
       console.error("Error adding course:", error);
@@ -157,6 +194,23 @@ const AddCourse = () => {
           value={courseDetails.url}
           onChange={changeHandler}
           placeholder="Enter the course URL"
+        />
+      </div>
+
+      <div className={styles.itemField}>
+        <label htmlFor="file-input">
+          <img
+            src={image ? URL.createObjectURL(image) : upload_area}
+            alt="upload image"
+            className={styles.thumbnailImg}
+          />
+        </label>
+        <input
+          onChange={imageHandler}
+          type="file"
+          name="image"
+          id="file-input"
+          hidden
         />
       </div>
 
