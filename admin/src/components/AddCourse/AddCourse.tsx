@@ -12,6 +12,7 @@ const AddCourse = () => {
     certificate_included: "",
     provider: "",
     url: "",
+    image_url: "" // Ensure image_url is part of the initial state
   });
 
   const imageHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,17 +45,31 @@ const AddCourse = () => {
     const data = new FormData();
 
     if (file) {
-      data.append("file", file); // Changed from "image" to "file"
+      data.append("file", file); // Ensure the file is appended correctly
     } else {
       alert("Please select an image file to upload.");
       return;
     }
+
     data.append('upload_preset', 'synapse');
     data.append('cloud_name', 'du8gajum1');
+
     try {
-      console.log(courseDetails);
+      const uploadImageResponse = await fetch("https://api.cloudinary.com/v1_1/du8gajum1/image/upload", {
+        method: "POST",
+        body: data
+      });
+
+      const uploadImageData = await uploadImageResponse.json();
+
+      if (!uploadImageData.url) {
+        alert("Failed to upload image. Please try again.");
+        return;
+      }
+
       const product = {
         ...courseDetails,
+        image_url: uploadImageData.url,
         tags: array.split(",").map(tag => tag.trim()).filter(tag => tag !== ""),
       };
 
@@ -67,16 +82,14 @@ const AddCourse = () => {
         body: JSON.stringify(product),
       });
 
-      const uploadImageResponse = await fetch("https://api.cloudinary.com/v1_1/du8gajum1/image/upload", {
-        method: "POST",
-        body: data
-      });
+      if (!addCourseResponse.ok) {
+        alert("Failed to add course. Please try again.");
+        return;
+      } else {
+        alert("Course added successfully!");
+      }
 
-      const responseData = await addCourseResponse.json();
-      const uploadImageData = await uploadImageResponse.json();
-
-      console.log(uploadImageData);
-      alert(responseData.message);
+      console.log(product)
     } catch (error) {
       console.error("Error adding course:", error);
       alert("An error occurred while adding the course. ⚠️");

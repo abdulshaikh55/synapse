@@ -10,6 +10,7 @@ const courseValidation = (req, res, next) => {
     certificate_included: Joi.boolean().required(),
     provider: Joi.string().min(3).max(50).required(),
     url: Joi.string().uri().required(),
+    image_url: Joi.string().uri().required(),
   });
 
   const { error } = schema.validate(req.body);

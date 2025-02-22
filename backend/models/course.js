@@ -8,6 +8,7 @@ const courseSchema = new Schema({
   certificate_included: { type: Boolean, required: true },
   provider: { type: String, required: true },
   url: { type: String, required: true },
+  image_url: { type: String, required: true },
 });
 
 const courseModel = mongoose.model('Course', courseSchema);
