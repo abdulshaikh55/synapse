@@ -1,69 +1,8 @@
-import c1_img from "./../assets/course_img1.jpg";
-import c2_img from "./../assets/course_img2.jpg";
-import c3_img from "./../assets/course_img3.jpg";
-import c4_img from "./../assets/course_img4.jpg";
-import c5_img from "./../assets/course_img5.jpg";
-import c6_img from "./../assets/course_img6.jpg";
-import c7_img from "./../assets/course_img07.jpg";
-import c8_img from "./../assets/course_img08.jpg";
-import c9_img from "./../assets/course_img09.jpg";
-import c10_img from "./../assets/course_img10.jpg";
-import c11_img from "./../assets/course_img11.jpg";
-import c12_img from "./../assets/course_img12.jpg";
-import c13_img from "./../assets/course_img13.jpg";
-import c14_img from "./../assets/course_img14.jpg";
-import c15_img from "./../assets/course_img15.jpg";
-import c16_img from "./../assets/course_img16.jpg";
-import c17_img from "./../assets/course_img17.jpg";
-import c18_img from "./../assets/course_img18.jpg";
-import c19_img from "./../assets/course_img19.jpg";
-import c20_img from "./../assets/course_img20.jpg";
-import c21_img from "./../assets/course_img21.jpg";
-import c22_img from "./../assets/course_img22.jpg";
-import c23_img from "./../assets/course_img23.jpg";
-import c24_img from "./../assets/course_img24.jpg";
-import c25_img from "./../assets/course_img25.jpg";
-import c26_img from "./../assets/course_img26.jpg";
-import c27_img from "./../assets/course_img27.jpg";
-import c28_img from "./../assets/course_img28.jpg";
-import c29_img from "./../assets/course_img29.jpg";
-import c30_img from "./../assets/course_img30.jpg";
-import c31_img from "./../assets/course_img31.jpg";
-import c32_img from "./../assets/course_img32.jpg";
-import c33_img from "./../assets/course_img33.jpg";
-import c34_img from "./../assets/course_img34.jpg";
-import c35_img from "./../assets/course_img35.jpg";
-import c36_img from "./../assets/course_img36.jpg";
-import c37_img from "./../assets/course_img37.jpg";
-import c38_img from "./../assets/course_img38.jpg";
-import c39_img from "./../assets/course_img39.jpg";
-import c40_img from "./../assets/course_img40.jpg";
-import c41_img from "./../assets/course_img41.jpg";
-import c42_img from "./../assets/course_img42.jpg";
-import c43_img from "./../assets/course_img43.jpg";
-import c44_img from "./../assets/course_img44.jpg";
-import c45_img from "./../assets/course_img45.jpg";
-import c46_img from "./../assets/course_img46.jpg";
-import c47_img from "./../assets/course_img47.jpg";
-import c48_img from "./../assets/course_img48.jpg";
-import c49_img from "./../assets/course_img49.jpg";
-import c50_img from "./../assets/course_img50.jpg";
-import c51_img from "./../assets/course_img51.jpg";
-import c52_img from "./../assets/course_img52.jpg";
-import c53_img from "./../assets/course_img53.jpg";
-import c54_img from "./../assets/course_img54.jpg";
-import c55_img from "./../assets/course_img55.jpg";
-import c56_img from "./../assets/course_img56.jpg";
-import c57_img from "./../assets/course_img57.jpg";
-import c58_img from "./../assets/course_img58.jpg";
-import c59_img from "./../assets/course_img59.jpg";
-import c60_img from "./../assets/course_img60.jpg";
-
 const courses = [
   {
     id: 1,
     name: "Machine Learning in Python Environment",
-    image: c1_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img1",
     tags: [
       "machine_learning",
       "introduction",
@@ -80,7 +19,7 @@ const courses = [
   {
     id: 2,
     name: "Introduction to Deep Learning with TensorFlow",
-    image: c2_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img2",
     tags: ["deep_learning", "tensorflow", "beginner", "ai", "python"],
     pricing: "free",
     certificate_included: true,
@@ -90,7 +29,7 @@ const courses = [
   {
     id: 3,
     name: "Data Science Essentials in Python",
-    image: c3_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img3",
     tags: [
       "data_science",
       "python",
@@ -107,7 +46,7 @@ const courses = [
   {
     id: 4,
     name: "Artificial Intelligence for Everyone",
-    image: c4_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img4",
     tags: ["ai", "non-technical", "introduction", "machine_learning"],
     pricing: "free",
     certificate_included: false,
@@ -117,7 +56,7 @@ const courses = [
   {
     id: 5,
     name: "Full Stack Web Development Bootcamp",
-    image: c5_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img5",
     tags: [
       "web_development",
       "full_stack",
@@ -135,7 +74,7 @@ const courses = [
   {
     id: 6,
     name: "Introduction to Cloud Computing",
-    image: c6_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img6",
     tags: ["cloud_computing", "beginner", "aws", "azure", "google_cloud"],
     pricing: "free",
     certificate_included: true,
@@ -145,7 +84,7 @@ const courses = [
   {
     id: 7,
     name: "Cybersecurity Basics",
-    image: c7_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img07",
     tags: ["cybersecurity", "beginner", "network_security", "ethical_hacking"],
     pricing: "free",
     certificate_included: false,
@@ -155,7 +94,7 @@ const courses = [
   {
     id: 8,
     name: "Introduction to DevOps",
-    image: c8_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img08",
     tags: ["devops", "ci_cd", "automation", "docker", "kubernetes"],
     pricing: "paid",
     certificate_included: true,
@@ -165,7 +104,7 @@ const courses = [
   {
     id: 9,
     name: "Programming in C++",
-    image: c9_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img09",
     tags: ["c++", "programming", "beginner", "oop", "data_structures"],
     pricing: "free",
     certificate_included: false,
@@ -175,7 +114,7 @@ const courses = [
   {
     id: 10,
     name: "Digital Marketing Fundamentals",
-    image: c10_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img10",
     tags: [
       "digital_marketing",
       "seo",
@@ -191,7 +130,7 @@ const courses = [
   {
     id: 11,
     name: "Python for Data Analysis",
-    image: c11_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img11",
     tags: ["python", "data_analysis", "pandas", "numpy", "beginner"],
     pricing: "free",
     certificate_included: true,
@@ -201,7 +140,7 @@ const courses = [
   {
     id: 12,
     name: "Blockchain Basics",
-    image: c12_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img12",
     tags: [
       "blockchain",
       "cryptocurrency",
@@ -217,7 +156,7 @@ const courses = [
   {
     id: 13,
     name: "Mobile App Development with Flutter",
-    image: c13_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img13",
     tags: ["mobile_app", "flutter", "dart", "beginner", "cross_platform"],
     pricing: "paid",
     certificate_included: true,
@@ -227,7 +166,7 @@ const courses = [
   {
     id: 14,
     name: "Kotlin for Android Developers",
-    image: c14_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img14",
     tags: ["kotlin", "android", "app_development", "beginner", "programming"],
     pricing: "free",
     certificate_included: true,
@@ -237,7 +176,7 @@ const courses = [
   {
     id: 15,
     name: "Big Data and Hadoop",
-    image: c15_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img15",
     tags: ["big_data", "hadoop", "analytics", "data_engineering"],
     pricing: "paid",
     certificate_included: true,
@@ -247,7 +186,7 @@ const courses = [
   {
     id: 16,
     name: "AI in Healthcare",
-    image: c16_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img16",
     tags: ["ai", "healthcare", "technology", "beginner", "machine_learning"],
     pricing: "free",
     certificate_included: false,
@@ -257,7 +196,7 @@ const courses = [
   {
     id: 17,
     name: "React for Beginners",
-    image: c17_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img17",
     tags: ["react", "javascript", "frontend", "web_development"],
     pricing: "free",
     certificate_included: true,
@@ -267,7 +206,7 @@ const courses = [
   {
     id: 18,
     name: "Docker Essentials",
-    image: c18_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img18",
     tags: ["docker", "containers", "devops", "beginner"],
     pricing: "paid",
     certificate_included: true,
@@ -277,7 +216,7 @@ const courses = [
   {
     id: 19,
     name: "SQL for Data Analysis",
-    image: c19_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img19",
     tags: ["sql", "data_analysis", "databases", "beginner"],
     pricing: "free",
     certificate_included: true,
@@ -287,7 +226,7 @@ const courses = [
   {
     id: 20,
     name: "Game Development with Unity",
-    image: c20_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img20",
     tags: ["game_development", "unity", "c#", "beginner"],
     pricing: "paid",
     certificate_included: true,
@@ -297,7 +236,7 @@ const courses = [
   {
     id: 21,
     name: "Introduction to Kubernetes",
-    image: c21_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img21",
     tags: ["kubernetes", "devops", "orchestration", "cloud"],
     pricing: "free",
     certificate_included: true,
@@ -307,7 +246,7 @@ const courses = [
   {
     id: 22,
     name: "Building APIs with Node.js",
-    image: c22_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img22",
     tags: ["node.js", "api", "backend", "web_development"],
     pricing: "paid",
     certificate_included: true,
@@ -317,7 +256,7 @@ const courses = [
   {
     id: 23,
     name: "UI/UX Design for Beginners",
-    image: c23_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img23",
     tags: ["ui_ux", "design", "figma", "adobe_xd", "beginner"],
     pricing: "free",
     certificate_included: false,
@@ -327,7 +266,7 @@ const courses = [
   {
     id: 24,
     name: "Java Programming Masterclass",
-    image: c24_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img24",
     tags: ["java", "programming", "beginner", "oop"],
     pricing: "paid",
     certificate_included: true,
@@ -337,7 +276,7 @@ const courses = [
   {
     id: 25,
     name: "Introduction to Networking",
-    image: c25_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img25",
     tags: ["networking", "ccna", "beginner", "computer_networks"],
     pricing: "free",
     certificate_included: true,
@@ -347,7 +286,7 @@ const courses = [
   {
     id: 26,
     name: "Ethical Hacking Essentials",
-    image: c26_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img26",
     tags: [
       "ethical_hacking",
       "cybersecurity",
@@ -362,7 +301,7 @@ const courses = [
   {
     id: 27,
     name: "Advanced Excel Techniques",
-    image: c27_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img27",
     tags: ["excel", "data_analysis", "spreadsheets", "advanced"],
     pricing: "free",
     certificate_included: true,
@@ -372,7 +311,7 @@ const courses = [
   {
     id: 28,
     name: "Angular for Web Development",
-    image: c28_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img28",
     tags: ["angular", "javascript", "frontend", "web_development"],
     pricing: "paid",
     certificate_included: true,
@@ -382,29 +321,27 @@ const courses = [
   {
     id: 29,
     name: "Linux for Beginners",
-    image: c29_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img29",
     tags: ["linux", "command_line", "operating_system", "beginner"],
     pricing: "free",
     certificate_included: true,
     provider: "linuxfoundation.org",
     url: "https://linuxfoundation.org/learn/linux",
   },
-
   {
     id: 30,
     name: "TensorFlow for Deep Learning",
-    image: c30_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img30",
     tags: ["tensorflow", "deep_learning", "ai", "neural_networks"],
     pricing: "free",
     certificate_included: true,
     provider: "coursera.org",
     url: "https://coursera.org/course/tensorflow-for-deep-learning",
   },
-
   {
     id: 31,
     name: "Deep Learning Fundamentals",
-    image: c31_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img31",
     tags: [
       "deep_learning",
       "introduction",
@@ -420,7 +357,7 @@ const courses = [
   {
     id: 32,
     name: "Data Science with Python",
-    image: c32_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img32",
     tags: ["data_science", "python", "pandas", "numpy", "matplotlib"],
     pricing: "paid",
     certificate_included: true,
@@ -430,7 +367,7 @@ const courses = [
   {
     id: 33,
     name: "Artificial Intelligence for Beginners",
-    image: c33_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img33",
     tags: [
       "ai",
       "beginner",
@@ -446,7 +383,7 @@ const courses = [
   {
     id: 34,
     name: "Python for Data Analysis",
-    image: c34_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img34",
     tags: ["python", "data_analysis", "pandas", "numpy", "data_visualization"],
     pricing: "free",
     certificate_included: false,
@@ -456,7 +393,7 @@ const courses = [
   {
     id: 35,
     name: "SQL for Data Science",
-    image: c35_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img35",
     tags: ["sql", "data_science", "database", "queries", "data_management"],
     pricing: "paid",
     certificate_included: true,
@@ -466,7 +403,7 @@ const courses = [
   {
     id: 36,
     name: "Big Data with Hadoop",
-    image: c36_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img36",
     tags: ["big_data", "hadoop", "spark", "data_engineering"],
     pricing: "free",
     certificate_included: false,
@@ -476,7 +413,7 @@ const courses = [
   {
     id: 37,
     name: "Computer Vision with OpenCV",
-    image: c37_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img37",
     tags: ["computer_vision", "opencv", "image_processing", "deep_learning"],
     pricing: "paid",
     certificate_included: true,
@@ -486,7 +423,7 @@ const courses = [
   {
     id: 38,
     name: "Reinforcement Learning in Python",
-    image: c38_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img38",
     tags: ["reinforcement_learning", "machine_learning", "ai", "gym", "python"],
     pricing: "free",
     certificate_included: true,
@@ -496,7 +433,7 @@ const courses = [
   {
     id: 39,
     name: "Ethical Hacking for Beginners",
-    image: c39_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img39",
     tags: [
       "ethical_hacking",
       "cybersecurity",
@@ -511,7 +448,7 @@ const courses = [
   {
     id: 40,
     name: "Blockchain and Cryptocurrency",
-    image: c40_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img40",
     tags: [
       "blockchain",
       "cryptocurrency",
@@ -527,7 +464,7 @@ const courses = [
   {
     id: 41,
     name: "Software Development Lifecycle",
-    image: c41_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img41",
     tags: ["software_development", "sdlc", "project_management", "agile"],
     pricing: "free",
     certificate_included: true,
@@ -537,7 +474,7 @@ const courses = [
   {
     id: 42,
     name: "Introduction to Cloud Computing",
-    image: c42_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img42",
     tags: ["cloud_computing", "aws", "azure", "google_cloud", "cloud_services"],
     pricing: "paid",
     certificate_included: true,
@@ -547,7 +484,7 @@ const courses = [
   {
     id: 43,
     name: "Cybersecurity Fundamentals",
-    image: c43_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img43",
     tags: [
       "cybersecurity",
       "network_security",
@@ -562,7 +499,7 @@ const courses = [
   {
     id: 44,
     name: "Web Development with React",
-    image: c44_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img44",
     tags: ["web_development", "react", "frontend", "javascript", "ui"],
     pricing: "paid",
     certificate_included: true,
@@ -572,7 +509,7 @@ const courses = [
   {
     id: 45,
     name: "Natural Language Processing with Python",
-    image: c45_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img45",
     tags: [
       "nlp",
       "natural_language_processing",
@@ -587,18 +524,17 @@ const courses = [
   {
     id: 46,
     name: "JavaScript Essentials",
-    image: c46_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img46",
     tags: ["javascript", "frontend", "web_development", "es6"],
     pricing: "free",
     certificate_included: false,
     provider: "codecademy.com",
     url: "https://codecademy.com/course/javascript-essentials",
   },
-
   {
     id: 47,
     name: "Full Stack Web Development",
-    image: c47_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img47",
     tags: ["web_development", "full_stack", "node.js", "react", "mongodb"],
     pricing: "paid",
     certificate_included: true,
@@ -608,7 +544,7 @@ const courses = [
   {
     id: 48,
     name: "Linux for Beginners",
-    image: c48_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img48",
     tags: ["linux", "command_line", "bash", "sysadmin"],
     pricing: "free",
     certificate_included: false,
@@ -618,7 +554,7 @@ const courses = [
   {
     id: 49,
     name: "C++ Programming for Beginners",
-    image: c49_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img49",
     tags: ["c++", "programming", "oop", "beginner"],
     pricing: "free",
     certificate_included: true,
@@ -628,7 +564,7 @@ const courses = [
   {
     id: 50,
     name: "Java Programming Masterclass",
-    image: c50_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img50",
     tags: ["java", "oop", "backend", "spring_boot"],
     pricing: "paid",
     certificate_included: true,
@@ -638,7 +574,7 @@ const courses = [
   {
     id: 51,
     name: "Kubernetes for DevOps",
-    image: c51_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img51",
     tags: ["kubernetes", "devops", "docker", "cloud"],
     pricing: "paid",
     certificate_included: true,
@@ -648,7 +584,7 @@ const courses = [
   {
     id: 52,
     name: "Game Development with Unity",
-    image: c52_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img52",
     tags: ["game_development", "unity", "c#", "3d_games"],
     pricing: "free",
     certificate_included: false,
@@ -658,7 +594,7 @@ const courses = [
   {
     id: 53,
     name: "IoT Fundamentals",
-    image: c53_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img53",
     tags: ["iot", "embedded_systems", "raspberry_pi", "arduino"],
     pricing: "free",
     certificate_included: true,
@@ -668,7 +604,7 @@ const courses = [
   {
     id: 54,
     name: "Git & GitHub for Developers",
-    image: c54_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img54",
     tags: ["git", "github", "version_control", "collaboration"],
     pricing: "free",
     certificate_included: false,
@@ -678,7 +614,7 @@ const courses = [
   {
     id: 55,
     name: "Docker Essentials",
-    image: c55_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img55",
     tags: ["docker", "containers", "devops", "virtualization"],
     pricing: "paid",
     certificate_included: true,
@@ -688,7 +624,7 @@ const courses = [
   {
     id: 56,
     name: "Microsoft Excel for Data Analysis",
-    image: c56_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img56",
     tags: ["excel", "data_analysis", "spreadsheets", "pivot_tables"],
     pricing: "free",
     certificate_included: true,
@@ -698,7 +634,7 @@ const courses = [
   {
     id: 57,
     name: "Cyber Threat Intelligence",
-    image: c57_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img57",
     tags: [
       "cybersecurity",
       "threat_intelligence",
@@ -713,7 +649,7 @@ const courses = [
   {
     id: 58,
     name: "MATLAB for Engineers",
-    image: c58_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img58",
     tags: ["matlab", "engineering", "simulation", "programming"],
     pricing: "paid",
     certificate_included: true,
@@ -723,7 +659,7 @@ const courses = [
   {
     id: 59,
     name: "Agile & Scrum for Project Management",
-    image: c59_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img59",
     tags: ["agile", "scrum", "project_management", "software_development"],
     pricing: "free",
     certificate_included: true,
@@ -733,7 +669,7 @@ const courses = [
   {
     id: 60,
     name: "Project Management",
-    image: c60_img,
+    image: "https://res.cloudinary.com/du8gajum1/image/upload/f_auto,q_auto/course_img60",
     tags: ["phases_of_project", "planning", "initiation"],
     pricing: "free",
     certificate_included: true,
