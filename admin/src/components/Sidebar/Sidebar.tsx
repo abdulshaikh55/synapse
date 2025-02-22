@@ -13,10 +13,12 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <div className={styles.item}>
-        <img src={list_product_icon} alt="list product icon" />
-        <p>Course List</p>
-      </div>
+      <Link to={"/list"} style={{ textDecoration: "none" }}>
+        <div className={styles.item}>
+          <img src={list_product_icon} alt="list product icon" />
+          <p>Course List</p>
+        </div>
+      </Link>
     </div>
   );
 };

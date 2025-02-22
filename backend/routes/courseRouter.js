@@ -6,4 +6,6 @@ const courseController = require('../controllers/courseController');
 // Route to post a new course
 router.post('/add', courseController.addCourse);
 
+router.get('/all', courseController.getAllCourses);
+
 module.exports = router;

@@ -19,3 +19,13 @@ exports.addCourse = async (req, res) => {
     res.status(500).json({ message: 'Error adding course', error });
   }
 };
+
+exports.getAllCourses = async (req, res) => {
+  try {
+    const courses = await Course.find();
+    res.send(courses);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching courses', error });
+  }
+
+}
