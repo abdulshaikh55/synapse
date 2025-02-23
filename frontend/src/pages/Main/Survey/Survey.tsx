@@ -2,6 +2,12 @@ import styles from "./Survey.module.css";
 import { Link } from "react-router-dom";
 
 const Survey = () => {
+  const isAuthenticated = localStorage.getItem('authToken');
+
+  const displayAlert = () => {
+    alert("Please login to take the survey");
+  }
+
   return (
     <section className={styles.survey}>
       <h1>Courses Tailored to You</h1>
@@ -10,9 +16,13 @@ const Survey = () => {
         fit your needs.
       </p>
       <div className={styles.takeSurveyButton}>
-        <Link to="/surveyForm">
-          <button>Take survey</button>
-        </Link>
+        {isAuthenticated ? (
+          <Link to="/surveyForm">
+            <button>Take survey</button>
+          </Link>
+        ) : (
+          <button onClick={displayAlert}>Take survey</button>
+        )}
       </div>
     </section>
   );
