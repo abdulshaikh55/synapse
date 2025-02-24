@@ -15,6 +15,7 @@ const courses = [
     certificate_included: true,
     provider: "alison.com",
     url: "https://alison.com/course/machine-learning-in-python-environment",
+    description: "This course provides an introduction to machine learning using Python. It covers essential concepts and techniques, including data preprocessing and model evaluation. Students will gain hands-on experience with scikit-learn, a popular machine learning library."
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ const courses = [
     certificate_included: true,
     provider: "coursera.org",
     url: "https://coursera.org/learn/deep-learning-tensorflow",
+    description: "This course introduces the fundamentals of deep learning using TensorFlow. Participants will learn how to build and train neural networks for various applications. The course is designed for beginners and provides practical coding exercises."
   },
   {
     id: 3,
@@ -42,6 +44,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/data-science-essentials",
+    description: "This course covers the essential skills needed for data science using Python. It includes topics such as data manipulation with pandas and numerical analysis with NumPy. Students will also learn how to visualize data effectively."
   },
   {
     id: 4,
@@ -52,6 +55,7 @@ const courses = [
     certificate_included: false,
     provider: "edx.org",
     url: "https://edx.org/course/artificial-intelligence-for-everyone",
+    description: "This course provides a broad overview of artificial intelligence concepts. It is designed for non-technical audiences and covers the impact of AI on various industries. Participants will learn about the ethical considerations and future trends in AI."
   },
   {
     id: 5,
@@ -70,6 +74,7 @@ const courses = [
     certificate_included: true,
     provider: "codecademy.com",
     url: "https://codecademy.com/learn/full-stack-web-development",
+    description: "This bootcamp covers full stack web development, including front-end and back-end technologies. Students will learn HTML, CSS, JavaScript, React, and Node.js. The course emphasizes hands-on projects to build a portfolio."
   },
   {
     id: 6,
@@ -80,6 +85,7 @@ const courses = [
     certificate_included: true,
     provider: "simplilearn.com",
     url: "https://simplilearn.com/introduction-to-cloud-computing",
+    description: "This course introduces the basics of cloud computing and its various models. Participants will explore popular cloud service providers like AWS, Azure, and Google Cloud. The course is suitable for beginners looking to understand cloud technologies."
   },
   {
     id: 7,
@@ -90,6 +96,7 @@ const courses = [
     certificate_included: false,
     provider: "futurelearn.com",
     url: "https://futurelearn.com/courses/cybersecurity-basics",
+    description: "This course provides an introduction to the fundamentals of cybersecurity. It covers key concepts such as network security, ethical hacking, and risk management. Ideal for beginners interested in pursuing a career in cybersecurity."
   },
   {
     id: 8,
@@ -100,6 +107,7 @@ const courses = [
     certificate_included: true,
     provider: "pluralsight.com",
     url: "https://pluralsight.com/courses/introduction-to-devops",
+    description: "This course introduces the principles and practices of DevOps. Participants will learn about continuous integration, continuous delivery, and automation tools like Docker and Kubernetes. The course is designed for those new to DevOps."
   },
   {
     id: 9,
@@ -110,6 +118,7 @@ const courses = [
     certificate_included: false,
     provider: "codecademy.com",
     url: "https://codecademy.com/learn/programming-in-cpp",
+    description: "This course covers the basics of programming in C++. It introduces object-oriented programming concepts and data structures. Ideal for beginners looking to start their programming journey."
   },
   {
     id: 10,
@@ -126,6 +135,7 @@ const courses = [
     certificate_included: true,
     provider: "hubspot.com",
     url: "https://hubspot.com/learn/digital-marketing",
+    description: "This course provides an overview of digital marketing strategies and tools. Participants will learn about SEO, social media marketing, and content creation. It is designed for beginners looking to enhance their marketing skills."
   },
   {
     id: 11,
@@ -136,6 +146,7 @@ const courses = [
     certificate_included: true,
     provider: "kaggle.com",
     url: "https://kaggle.com/learn/python",
+    description: "This course focuses on using Python for data analysis. It covers libraries such as pandas and NumPy for data manipulation and analysis. Suitable for beginners who want to work with data."
   },
   {
     id: 12,
@@ -152,6 +163,7 @@ const courses = [
     certificate_included: false,
     provider: "ibm.com",
     url: "https://ibm.com/blockchain/basics",
+    description: "This course introduces the fundamental concepts of blockchain technology. Participants will learn about cryptocurrencies and how blockchain works. It is designed for beginners interested in this emerging technology."
   },
   {
     id: 13,
@@ -162,6 +174,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/flutter-development",
+    description: "This course covers mobile app development using Flutter and Dart. Participants will learn how to build cross-platform applications. It is suitable for beginners with no prior experience in mobile development."
   },
   {
     id: 14,
@@ -172,6 +185,7 @@ const courses = [
     certificate_included: true,
     provider: "developer.android.com",
     url: "https://developer.android.com/kotlin",
+    description: "This course introduces Kotlin programming for Android app development. Participants will learn the basics of Kotlin and how to create Android applications. It is designed for beginners interested in mobile development."
   },
   {
     id: 15,
@@ -182,6 +196,7 @@ const courses = [
     certificate_included: true,
     provider: "edureka.co",
     url: "https://edureka.co/big-data-and-hadoop",
+    description: "This course covers the fundamentals of big data and Hadoop. Participants will learn about data processing and analytics using Hadoop. It is suitable for those looking to enter the field of data engineering."
   },
   {
     id: 16,
@@ -192,6 +207,7 @@ const courses = [
     certificate_included: false,
     provider: "stanford.edu",
     url: "https://stanford.edu/courses/ai-in-healthcare",
+    description: "This course explores the applications of AI in the healthcare sector. Participants will learn about machine learning techniques used in medical diagnostics and treatment. It is designed for beginners interested in AI and healthcare."
   },
   {
     id: 17,
@@ -202,6 +218,7 @@ const courses = [
     certificate_included: true,
     provider: "scrimba.com",
     url: "https://scrimba.com/learn/react",
+    description: "This course introduces React, a popular JavaScript library for building user interfaces. Participants will learn the basics of React components and state management. It is suitable for beginners looking to enhance their web development skills."
   },
   {
     id: 18,
@@ -212,6 +229,7 @@ const courses = [
     certificate_included: true,
     provider: "linuxfoundation.org",
     url: "https://linuxfoundation.org/learn/docker-essentials",
+    description: "This course covers the essentials of Docker and containerization. Participants will learn how to create and manage containers for application deployment. It is designed for beginners interested in DevOps practices."
   },
   {
     id: 19,
@@ -222,6 +240,7 @@ const courses = [
     certificate_included: true,
     provider: "dataquest.io",
     url: "https://dataquest.io/sql-for-data-analysis",
+    description: "This course introduces SQL for data analysis and database management. Participants will learn how to write SQL queries to extract and analyze data. It is suitable for beginners looking to work with databases."
   },
   {
     id: 20,
@@ -232,6 +251,7 @@ const courses = [
     certificate_included: true,
     provider: "learn.unity.com",
     url: "https://learn.unity.com",
+    description: "This course covers the basics of game development using Unity. Participants will learn how to create 2D and 3D games using C#. It is designed for beginners interested in game design and development."
   },
   {
     id: 21,
@@ -242,6 +262,7 @@ const courses = [
     certificate_included: true,
     provider: "cncf.io",
     url: "https://cncf.io/kubernetes",
+    description: "This course introduces Kubernetes, a powerful container orchestration platform. Participants will learn how to deploy and manage containerized applications. It is suitable for those new to cloud-native technologies."
   },
   {
     id: 22,
@@ -252,6 +273,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/node-api-development",
+    description: "This course covers the fundamentals of building APIs using Node.js. Participants will learn how to create RESTful services and manage data. It is designed for those interested in backend development."
   },
   {
     id: 23,
@@ -262,6 +284,7 @@ const courses = [
     certificate_included: false,
     provider: "coursera.org",
     url: "https://coursera.org/learn/ui-ux-design",
+    description: "This course introduces the principles of UI/UX design. Participants will learn about user research, wireframing, and prototyping using tools like Figma and Adobe XD. It is suitable for beginners interested in design."
   },
   {
     id: 24,
@@ -272,6 +295,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/java-programming-masterclass",
+    description: "This course covers the fundamentals of Java programming. Participants will learn object-oriented programming concepts and how to build Java applications. It is designed for beginners looking to start their programming journey."
   },
   {
     id: 25,
@@ -282,6 +306,7 @@ const courses = [
     certificate_included: true,
     provider: "cisco.com",
     url: "https://cisco.com/introduction-to-networking",
+    description: "This course introduces the basics of computer networking. Participants will learn about network protocols, devices, and configurations. It is suitable for beginners interested in networking concepts."
   },
   {
     id: 26,
@@ -297,6 +322,7 @@ const courses = [
     certificate_included: true,
     provider: "ceh.com",
     url: "https://ceh.com/ethical-hacking",
+    description: "This course covers the essentials of ethical hacking and penetration testing. Participants will learn about security vulnerabilities and how to exploit them ethically. It is designed for beginners interested in cybersecurity."
   },
   {
     id: 27,
@@ -307,6 +333,7 @@ const courses = [
     certificate_included: true,
     provider: "microsoft.com",
     url: "https://microsoft.com/advanced-excel",
+    description: "This course covers advanced techniques in Microsoft Excel for data analysis. Participants will learn about functions, pivot tables, and data visualization. It is suitable for those looking to enhance their Excel skills."
   },
   {
     id: 28,
@@ -317,6 +344,7 @@ const courses = [
     certificate_included: true,
     provider: "pluralsight.com",
     url: "https://pluralsight.com/courses/angular",
+    description: "This course introduces Angular, a popular framework for building web applications. Participants will learn about components, services, and routing. It is designed for those interested in frontend development."
   },
   {
     id: 29,
@@ -327,6 +355,7 @@ const courses = [
     certificate_included: true,
     provider: "linuxfoundation.org",
     url: "https://linuxfoundation.org/learn/linux",
+    description: "This course provides an introduction to the Linux operating system. Participants will learn about the command line, file management, and system administration. It is suitable for beginners looking to understand Linux."
   },
   {
     id: 30,
@@ -337,6 +366,7 @@ const courses = [
     certificate_included: true,
     provider: "coursera.org",
     url: "https://coursera.org/course/tensorflow-for-deep-learning",
+    description: "This course covers deep learning techniques using TensorFlow. Participants will learn how to build and train neural networks for various applications. It is designed for those interested in AI and machine learning."
   },
   {
     id: 31,
@@ -353,6 +383,7 @@ const courses = [
     certificate_included: true,
     provider: "coursera.org",
     url: "https://coursera.org/course/deep-learning-fundamentals",
+    description: "This course introduces the fundamentals of deep learning. Participants will learn about neural networks and their applications. It is suitable for beginners looking to understand deep learning concepts."
   },
   {
     id: 32,
@@ -363,6 +394,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/data-science-with-python",
+    description: "This course covers data science techniques using Python. Participants will learn about data manipulation, analysis, and visualization. It is designed for those interested in pursuing a career in data science."
   },
   {
     id: 33,
@@ -379,6 +411,7 @@ const courses = [
     certificate_included: true,
     provider: "edx.org",
     url: "https://edx.org/course/artificial-intelligence-for-beginners",
+    description: "This course provides an introduction to artificial intelligence concepts. Participants will learn about machine learning and deep learning fundamentals. It is suitable for beginners interested in AI."
   },
   {
     id: 34,
@@ -389,6 +422,7 @@ const courses = [
     certificate_included: false,
     provider: "kaggle.com",
     url: "https://kaggle.com/course/python-for-data-analysis",
+    description: "This course focuses on using Python for data analysis. Participants will learn about data manipulation and visualization techniques. It is designed for those looking to enhance their data analysis skills."
   },
   {
     id: 35,
@@ -399,6 +433,7 @@ const courses = [
     certificate_included: true,
     provider: "datacamp.com",
     url: "https://datacamp.com/course/sql-for-data-science",
+    description: "This course introduces SQL for data science applications. Participants will learn how to write SQL queries to manage and analyze data. It is suitable for those interested in data management."
   },
   {
     id: 36,
@@ -409,6 +444,7 @@ const courses = [
     certificate_included: false,
     provider: "udacity.com",
     url: "https://udacity.com/course/big-data-with-hadoop",
+    description: "This course covers big data concepts and the Hadoop ecosystem. Participants will learn about data processing and analytics using Hadoop. It is designed for those interested in big data technologies."
   },
   {
     id: 37,
@@ -419,6 +455,7 @@ const courses = [
     certificate_included: true,
     provider: "pluralsight.com",
     url: "https://pluralsight.com/course/computer-vision-opencv",
+    description: "This course introduces computer vision techniques using OpenCV. Participants will learn how to process and analyze images and videos. It is suitable for those interested in image processing and computer vision."
   },
   {
     id: 38,
@@ -429,6 +466,7 @@ const courses = [
     certificate_included: true,
     provider: "fast.ai",
     url: "https://fast.ai/course/reinforcement-learning",
+    description: "This course covers reinforcement learning concepts using Python. Participants will learn how to implement reinforcement learning algorithms. It is designed for those interested in AI and machine learning."
   },
   {
     id: 39,
@@ -444,6 +482,7 @@ const courses = [
     certificate_included: true,
     provider: "cybrary.it",
     url: "https://cybrary.it/course/ethical-hacking-beginners",
+    description: "This course introduces ethical hacking techniques and methodologies. Participants will learn about security vulnerabilities and how to test them. It is suitable for beginners interested in cybersecurity."
   },
   {
     id: 40,
@@ -460,6 +499,7 @@ const courses = [
     certificate_included: false,
     provider: "futurelearn.com",
     url: "https://futurelearn.com/course/blockchain-cryptocurrency",
+    description: "This course covers the basics of blockchain technology and cryptocurrencies. Participants will learn about Bitcoin, Ethereum, and smart contracts. It is designed for those interested in understanding blockchain."
   },
   {
     id: 41,
@@ -470,6 +510,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/software-development-lifecycle",
+    description: "This course introduces the software development lifecycle (SDLC) and its phases. Participants will learn about project management methodologies, including Agile. It is suitable for those interested in software development."
   },
   {
     id: 42,
@@ -480,6 +521,7 @@ const courses = [
     certificate_included: true,
     provider: "coursera.org",
     url: "https://coursera.org/course/cloud-computing",
+    description: "This course provides an introduction to cloud computing concepts and services. Participants will learn about major cloud providers like AWS, Azure, and Google Cloud. It is designed for beginners looking to understand cloud technologies."
   },
   {
     id: 43,
@@ -495,6 +537,7 @@ const courses = [
     certificate_included: true,
     provider: "edx.org",
     url: "https://edx.org/course/cybersecurity-fundamentals",
+    description: "This course covers the fundamentals of cybersecurity and its importance. Participants will learn about network security, cryptography, and ethical hacking. It is suitable for beginners interested in cybersecurity."
   },
   {
     id: 44,
@@ -505,6 +548,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/react-web-development",
+    description: "This course introduces web development using React. Participants will learn about components, state management, and routing. It is designed for those interested in frontend development."
   },
   {
     id: 45,
@@ -520,6 +564,7 @@ const courses = [
     certificate_included: false,
     provider: "fast.ai",
     url: "https://fast.ai/course/nlp",
+    description: "This course covers natural language processing (NLP) techniques using Python. Participants will learn how to analyze and process text data. It is suitable for those interested in NLP and machine learning."
   },
   {
     id: 46,
@@ -530,6 +575,7 @@ const courses = [
     certificate_included: false,
     provider: "codecademy.com",
     url: "https://codecademy.com/course/javascript-essentials",
+    description: "This course introduces the essentials of JavaScript programming. Participants will learn about variables, functions, and ES6 features. It is designed for beginners looking to enhance their web development skills."
   },
   {
     id: 47,
@@ -540,6 +586,7 @@ const courses = [
     certificate_included: true,
     provider: "coursera.org",
     url: "https://coursera.org/course/full-stack-web-development",
+    description: "This course covers full stack web development, including both front-end and back-end technologies. Participants will learn about Node.js, React, and MongoDB. It is suitable for those looking to become full stack developers."
   },
   {
     id: 48,
@@ -550,6 +597,7 @@ const courses = [
     certificate_included: false,
     provider: "udemy.com",
     url: "https://udemy.com/course/linux-for-beginners",
+    description: "This course provides an introduction to the Linux operating system and command line. Participants will learn basic commands and system administration tasks. It is suitable for beginners looking to understand Linux."
   },
   {
     id: 49,
@@ -560,6 +608,7 @@ const courses = [
     certificate_included: true,
     provider: "edx.org",
     url: "https://edx.org/course/cpp-programming-beginners",
+    description: "This course introduces C++ programming for beginners. Participants will learn about object-oriented programming and basic syntax. It is designed for those looking to start programming in C++."
   },
   {
     id: 50,
@@ -570,6 +619,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/java-programming-masterclass",
+    description: "This course covers advanced Java programming concepts and frameworks. Participants will learn about object-oriented programming and Spring Boot. It is suitable for those looking to deepen their Java skills."
   },
   {
     id: 51,
@@ -580,6 +630,7 @@ const courses = [
     certificate_included: true,
     provider: "pluralsight.com",
     url: "https://pluralsight.com/course/kubernetes-for-devops",
+    description: "This course introduces Kubernetes for container orchestration. Participants will learn how to deploy and manage applications in a Kubernetes environment. It is designed for those interested in DevOps practices."
   },
   {
     id: 52,
@@ -590,6 +641,7 @@ const courses = [
     certificate_included: false,
     provider: "coursera.org",
     url: "https://coursera.org/course/unity-game-development",
+    description: "This course covers game development using Unity and C#. Participants will learn how to create 2D and 3D games. It is suitable for beginners interested in game design."
   },
   {
     id: 53,
@@ -600,6 +652,7 @@ const courses = [
     certificate_included: true,
     provider: "udacity.com",
     url: "https://udacity.com/course/iot-fundamentals",
+    description: "This course introduces the fundamentals of the Internet of Things (IoT). Participants will learn about embedded systems and how to work with Raspberry Pi and Arduino. It is designed for beginners interested in IoT technologies."
   },
   {
     id: 54,
@@ -610,6 +663,7 @@ const courses = [
     certificate_included: false,
     provider: "codecademy.com",
     url: "https://codecademy.com/course/git-and-github",
+    description: "This course covers the basics of version control using Git and GitHub. Participants will learn how to manage code changes and collaborate with others. It is suitable for beginners looking to understand version control."
   },
   {
     id: 55,
@@ -620,6 +674,7 @@ const courses = [
     certificate_included: true,
     provider: "edx.org",
     url: "https://edx.org/course/docker-essentials",
+    description: "This course introduces Docker and containerization concepts. Participants will learn how to create and manage containers for application deployment. It is designed for those interested in DevOps practices."
   },
   {
     id: 56,
@@ -630,6 +685,7 @@ const courses = [
     certificate_included: true,
     provider: "coursera.org",
     url: "https://coursera.org/course/excel-for-data-analysis",
+    description: "This course covers data analysis techniques using Microsoft Excel. Participants will learn about functions, pivot tables, and data visualization. It is suitable for those looking to enhance their Excel skills."
   },
   {
     id: 57,
@@ -645,6 +701,7 @@ const courses = [
     certificate_included: false,
     provider: "cybrary.it",
     url: "https://cybrary.it/course/cyber-threat-intelligence",
+    description: "This course introduces cyber threat intelligence concepts and methodologies. Participants will learn how to analyze threats and vulnerabilities. It is suitable for those interested in cybersecurity."
   },
   {
     id: 58,
@@ -655,6 +712,7 @@ const courses = [
     certificate_included: true,
     provider: "udemy.com",
     url: "https://udemy.com/course/matlab-for-engineers",
+    description: "This course covers the basics of MATLAB for engineering applications. Participants will learn how to perform simulations and data analysis. It is designed for engineers and students in technical fields."
   },
   {
     id: 59,
@@ -665,6 +723,7 @@ const courses = [
     certificate_included: true,
     provider: "edx.org",
     url: "https://edx.org/course/agile-and-scrum",
+    description: "This course introduces Agile methodologies and Scrum practices for project management. Participants will learn how to manage projects effectively using Agile principles. It is suitable for those interested in project management."
   },
   {
     id: 60,
@@ -675,6 +734,7 @@ const courses = [
     certificate_included: true,
     provide: "mygreatlearning.com",
     url: "https://www.mygreatlearning.com/academy/learn-for-free/courses/project-management",
+    description: "This course covers the phases of project management from initiation to closure. Participants will learn about planning, execution, and monitoring of projects. It is designed for those looking to enhance their project management skills."
   },
 ];
 
