@@ -12,25 +12,30 @@ import Courses from "./pages/Courses/Courses";
 import About from "./pages/About/About";
 import SearchedCourses from "./pages/SearchedCourses/SearchedCourses";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import Course from "./components/Course/Course";
+import { CourseProvider } from "./context/CourseContext";
 
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/signupLogin" element={<SignupLogin />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/surveyForm" element={<SurveyForm />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/searchedCourses" element={<SearchedCourses />} />
-          <Route path="/user-profile" element={<UserProfile />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <CourseProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/signupLogin" element={<SignupLogin />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/surveyForm" element={<SurveyForm />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/:id" element={<Course />} />
+            <Route path="/searchedCourses" element={<SearchedCourses />} />
+            <Route path="/user-profile" element={<UserProfile />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CourseProvider>
     </AuthProvider>
   );
 }
