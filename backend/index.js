@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const AuthRouter = require("./routes/authRouter.js");
 const courseRouter = require("./routes/courseRouter.js");
-const surveyResponseRouter = require('./routes/surveyResponseRouter.js');
+const surveyResponseRouter = require('./routes/surveyRouter.js');
 const connectDB = require('./models/db.js');
 
 require('dotenv').config()
@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/auth', AuthRouter);
 app.use('/admin', courseRouter);
-app.use(surveyResponseRouter)
+app.use('/survey', surveyResponseRouter)
 
 const server = () => {
   connectDB();
