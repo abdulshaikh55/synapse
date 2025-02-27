@@ -109,4 +109,4 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 ## License
 
-[License] (e.g., MIT, Apache 2.0)
+[License](./LICENSE)
