@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./CourseCard.module.css";
 
 const CourseCard = (props: any) => {
+  const navigate = useNavigate();
+
+  const handleTagClick = (tag: string) => {
+    navigate("/searchedCourses", { state: { searchTerm: tag } });
+
+  };
+
   return (
     <div className={styles.courseCard}>
       <Link to={`/courses/${props.id}`}>
@@ -16,7 +23,9 @@ const CourseCard = (props: any) => {
       <ul className={styles.courseCardList}>
         {props.tags.slice(0, 3).map((tag: string, index: number) => (
           <li key={index} className={styles.courseCardListItem}>
-            #{tag}
+            <button className={styles.tag} onClick={() => handleTagClick(tag)}>
+              #{tag}
+            </button>
           </li>
         ))}
       </ul>
