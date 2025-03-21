@@ -41,8 +41,8 @@ This project is a Learning Management System (LMS) that leverages a recommender 
 1.  **Clone the repository:**
 
     ```bash
-    git clone [repository URL]
-    cd [repository directory]
+    git clone git@github.com:abdulshaikh55/synapse.git
+    cd synapse
     ```
 
 2.  **Install dependencies:**
