@@ -1,0 +1,31 @@
+.uploadCourses {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 40px;
+  height: 300px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+
+  p {
+    font-size: large;
+  }
+}
+
+.upload_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #111;
+  width: 100%;
+  height: 180px;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.upload_img {
+  width: 90px;
+  height: auto;
+}
