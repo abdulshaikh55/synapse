@@ -9,6 +9,7 @@ const courseSchema = new Schema({
   provider: { type: String, required: true },
   url: { type: String, required: true },
   image_url: { type: String, required: true },
+  description: { type: String, required: true },
 });
 
 const courseModel = mongoose.model('Course', courseSchema);

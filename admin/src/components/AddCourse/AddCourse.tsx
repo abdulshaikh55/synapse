@@ -1,10 +1,8 @@
 import styles from "./AddCourse.module.css";
 import { useState } from "react";
-import upload_area from "../../assets/upload_area.svg";
 
 const AddCourse = () => {
-  const [image, setImage] = useState<File | null>(null);
-  const [file, setFile] = useState<File | null>(null);
+
   const [courseDetails, setCourseDetails] = useState({
     name: "",
     tags: [],
@@ -12,19 +10,10 @@ const AddCourse = () => {
     certificate_included: "",
     provider: "",
     url: "",
-    image_url: "" // Ensure image_url is part of the initial state
+    image_url: "",
+    description: "",
   });
 
-  const imageHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    const file = e.target.files?.[0];
-    if (file) {
-      setImage(file);
-      setFile(file);
-    } else {
-      alert("No file selected. Please choose an image file.");
-    }
-  };
 
   const changeHandler = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -42,37 +31,12 @@ const AddCourse = () => {
     }
 
     const array: string = courseDetails.tags.toString();
-    const data = new FormData();
-
-    if (file) {
-      data.append("file", file); // Ensure the file is appended correctly
-    } else {
-      alert("Please select an image file to upload.");
-      return;
-    }
-
-    data.append('upload_preset', 'synapse');
-    data.append('cloud_name', 'du8gajum1');
+    const product = {
+      ...courseDetails,
+      tags: array.split(",").map(tag => tag.trim()).filter(tag => tag !== ""),
+    };
 
     try {
-      const uploadImageResponse = await fetch("https://api.cloudinary.com/v1_1/du8gajum1/image/upload", {
-        method: "POST",
-        body: data
-      });
-
-      const uploadImageData = await uploadImageResponse.json();
-
-      if (!uploadImageData.url) {
-        alert("Failed to upload image. Please try again.");
-        return;
-      }
-
-      const product = {
-        ...courseDetails,
-        image_url: uploadImageData.url,
-        tags: array.split(",").map(tag => tag.trim()).filter(tag => tag !== ""),
-      };
-
       const addCourseResponse = await fetch("http://localhost:8080/admin/add", {
         method: "POST",
         headers: {
@@ -117,6 +81,17 @@ const AddCourse = () => {
           onChange={changeHandler}
           name="tags"
           placeholder="Enter relevant tags, separated by commas"
+        />
+      </div>
+
+      <div className={styles.itemField}>
+        <p>Course Description</p>
+        <input
+          type="text"
+          value={courseDetails.description}
+          onChange={changeHandler}
+          name="description"
+          placeholder="Describe the course in 2 - 3 sentences"
         />
       </div>
 
@@ -211,19 +186,13 @@ const AddCourse = () => {
       </div>
 
       <div className={styles.itemField}>
-        <label htmlFor="file-input">
-          <img
-            src={image ? URL.createObjectURL(image) : upload_area}
-            alt="upload image"
-            className={styles.thumbnailImg}
-          />
-        </label>
+        <p>Image URL</p>
         <input
-          onChange={imageHandler}
-          type="file"
-          name="image"
-          id="file-input"
-          hidden
+          type="text"
+          name="image_url"
+          value={courseDetails.image_url}
+          onChange={changeHandler}
+          placeholder="Enter the image URL"
         />
       </div>
 

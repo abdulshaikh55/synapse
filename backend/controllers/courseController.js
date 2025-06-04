@@ -2,7 +2,7 @@ const Course = require('../models/course');
 
 exports.addCourse = async (req, res) => {
   try {
-    const { name, tags, pricing, certificate_included, provider, url, image_url } = req.body;
+    const { name, tags, pricing, certificate_included, provider, url, image_url, description } = req.body;
 
     const existingCourse = await Course.findOne({ name, url });
 
@@ -11,7 +11,7 @@ exports.addCourse = async (req, res) => {
     }
 
     const newCourse = new Course({
-      name, tags, pricing, certificate_included, provider, url, image_url
+      name, tags, pricing, certificate_included, provider, url, image_url, description
     })
     await newCourse.save();
     res.status(201).json({ message: 'Course added successfully!', course: newCourse });
